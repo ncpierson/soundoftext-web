@@ -22,19 +22,79 @@
     <title>React App</title>
   </head>
   <body>
+    <!--
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <head>
+      <h1 class="brand">Sound of Text</h1>
+      <nav>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Learn</a></li>
+          <li><a href="#">Contribute</a></li>
+        </ul>
+      </nav>
+    </head>
+    <main>
+      <section id="app">
+        <div class="engine">
+          <form>
+            <div class="input-group engine__text">
+              <label for="text">Text:</label>
+              <textarea name="text" rows="2" minlength="0" maxlength="100" required autofocus></textarea>
+            </div>
+            <div class="input-group engine__voice">
+              <label for="voice">Voice:</label>
+              <select name="voice">
+                <option>English</option>
+                <option>Spanish</option>
+              </select>
+            </div>
+            <div class="button-group">
+              <input type="submit" />
+            </div>
+          </form>
+        </div>
+        <h2 class="title">Sounds</h2>
+        <!--
+        <div class="no-sound">
+          No sounds yet :(
+        </div>
+        -->
+        <div class="sounds">
+          <div class="sound">
+            <h3 class="sound__text">I once ate a pumpkin and boy was it delicious.</h3>
+            <div class="sound__voice">English</div>
+            <div class="sound__actions">
+              <button class="action">Play</button>
+              <button class="action">Download</button>
+            </div>
+          </div>
+          <div class="sound">
+            <h3 class="sound__text">I once ate a pumpkin and boy was it delicious.</h3>
+            <div class="sound__voice">English</div>
+            <div class="sound__actions">
+              <button class="action">Play</button>
+              <button class="action">Download</button>
+            </div>
+          </div>
+          <div class="sound">
+            <h3 class="sound__text">I once ate a pumpkin and boy was it delicious.</h3>
+            <div class="sound__voice">English</div>
+            <div class="sound__actions">
+              <button class="action">Play</button>
+              <button class="action">Download</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about">
+      </section>
+      <section id="contribute">
+      </section>
+    </main>
   </body>
 </html>
