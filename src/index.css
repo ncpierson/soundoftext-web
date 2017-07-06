@@ -11,9 +11,18 @@ body {
 
 /** Header Brand/Navigation **/
 
+header {
+  margin-bottom: 0.5em;
+}
+
 h1.brand {
   font-size: 1.5em;
   text-align: center;
+}
+
+nav {
+  background: lightgrey;
+  padding: 0.5em;
 }
 
 nav ul {
@@ -21,6 +30,7 @@ nav ul {
   display: flex;
   justify-content: space-around;
   padding: 0;
+  margin: 0;
 }
 
 /** Section styling **/
@@ -128,4 +138,12 @@ section {
 
 .progress-bar {
   font-family: monospace;
+}
+
+/** Footer Styles **/
+
+footer {
+  text-align: center;
+  padding: 0.5em 0;
+  background: lightgrey;
 }
