@@ -25,7 +25,7 @@ nav ul {
 
 /** Section styling **/
 
-section#app {
+section#app, section#about {
   padding: 0.5em;
 }
 
@@ -85,3 +85,5 @@ section#app {
   min-width: 45px;
   font-size: 1em;
 }
+
+/** About Styles **/
