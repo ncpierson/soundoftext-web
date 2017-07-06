@@ -25,7 +25,7 @@ nav ul {
 
 /** Section styling **/
 
-section#app, section#about, section#learn {
+section {
   padding: 0.5em;
 }
 
@@ -91,3 +91,41 @@ section#app, section#about, section#learn {
 /** Learning Resources Styles **/
 
 /** Contribution Styles **/
+
+.donate {
+  min-height: 45px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.goals {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.goal {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.goal .goal__progress {
+  background: lightgrey;
+  min-height: 45px;
+  text-align: center;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goal .goal__title {
+  text-align: center;
+}
+
+.progress-bar {
+  font-family: monospace;
+}
