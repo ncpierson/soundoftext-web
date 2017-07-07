@@ -1,0 +1,21 @@
+header {
+  margin-bottom: 0.5em;
+}
+
+h1.brand {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+nav {
+  background: lightgrey;
+  padding: 0.5em;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}

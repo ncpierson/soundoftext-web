@@ -1,0 +1,49 @@
+.engine input, .engine select, .engine textarea {
+  display: block;
+  width: 100%;
+  min-height: 45px;
+  font-size: 1em;
+  padding: 0.5em;
+}
+
+.engine textarea {
+  resize: none;
+}
+
+.engine .input-group, .engine .button-group {
+  margin-bottom: 0.5em;
+}
+
+.sounds {
+  display: flex;
+  flex-direction: column;
+}
+
+.sound {
+  margin-bottom: 0.5em;
+  border: 1px solid black;
+  padding: 0.5em;
+}
+
+.sound .sound__text {
+  margin-top: 0;
+  font-size: 1em;
+  font-weight: normal;
+  margin-bottom: 0.5em;
+}
+
+.sound .sound__voice {
+  margin-bottom: 0.5em;
+  font-style: italic;
+}
+
+.sound .sound__actions {
+  display: flex;
+}
+
+.sound__actions .action {
+  flex: auto;
+  min-height: 45px;
+  min-width: 45px;
+  font-size: 1em;
+}
