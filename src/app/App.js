@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import SoundForm from './SoundForm';
 import SoundsList from './SoundsList';
-import { storage } from '../firebase';
 import 'whatwg-fetch';
 import './App.css';
 
@@ -17,29 +16,19 @@ class App extends Component {
   }
 
   handleSubmit(text, voice) {
-    fetch('https://sound-of-text-3ba84.firebaseapp.com/sounds', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text: text, voice: voice })
-    }).then(response => {
-      return response.json();
-    }).then(json => {
-      return storage.ref(json.path).getDownloadURL();
-    }).then(url => {
-      const newSound = {
-        id: Math.floor(Math.random() * 100),
-        text: text,
-        voice: voice,
-        url: url
-      };
+    const sound = {
+      voice: voice,
+      text: text
+    };
 
-      this.setState(prevState => {
-        return { sounds: [newSound].concat(prevState.sounds) }
-      });
+    this.setState(prevState => {
+      return {
+        sounds: [sound].concat(prevState.sounds)
+      };
     });
   }
 
-  render(){
+  render() {
     return (
       <section id="app">
         <SoundForm onSubmit={this.handleSubmit} />
@@ -49,6 +38,5 @@ class App extends Component {
     );
   }
 }
-
 
 export default App;
