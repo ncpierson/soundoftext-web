@@ -20,39 +20,34 @@ exports.sounds = functions.https.onRequest((req, res) => {
     const voice = req.body.voice;
 
     tts(text, voice).then(url => {
-      return storeSound(text, url);
+      return storeSound(text, voice, url);
     }).then(path => {
-      return saveSound(text, voice, path);
-    }).then(sound => {
-      res.json(sound);
+      res.json({ path: path });
     });
   });
 });
 
-function storeSound(text, url) {
+function storeSound(text, voice, url) {
   return new Promise(function(resolve, reject) {
-    const filePath = `sounds/${text}`;
+    const filePath = `${voice}/${text}.mp3`;
 
     const bucket = storage.bucket('sound-of-text-3ba84.appspot.com');
     const file = bucket.file(filePath);
     const fileStream = file.createWriteStream();
 
-    request({
+    const requestOpts = {
       url: url,
       headers: { 'User-Agent': 'SoundOfTextBot (soundoftext.com)' }
-    }).on('error', (err) => {
-      console.log(err);
-      reject(err);
-    }).pipe(fileStream).on('finish', () => {
-      resolve(filePath);
-    }).on('error', function(err) {
-      console.log(err);
-      reject(err);
-    });
+    }
+
+    request(requestOpts)
+      .on('error', e => { log(e); reject(e); })
+      .pipe(fileStream)
+      .on('finish', () => resolve(filePath))
+      .on('error', e => { log(e); reject(e); });
   });
 }
 
-function saveSound(text, voice, path) {
-  console.log(path);
-  return { id: 1, path: path };
+function log(err) {
+  console.log(err);
 }
