@@ -5,13 +5,14 @@
   "storage": {
     "rules": "storage.rules"
   },
+  "functions": {
+    "source": "functions"
+  },
   "hosting": {
     "public": "build",
     "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
+      { "source": "/sounds", "function": "sounds" },
+      { "source": "**", "destination": "/index.html" }
     ]
   }
 }

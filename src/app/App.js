@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { storage } from '../firebase';
+import 'whatwg-fetch';
 import './App.css';
 
 class App extends Component {
@@ -6,18 +8,39 @@ class App extends Component {
     super();
 
     this.state = {
-      sounds: [
-        { id: '1', text: 'I once ate a pumpkin and boy was it delicious', voice: 'en' },
-        { id: '2', text: 'Eragon voló por la noche', voice: 'es' },
-        { id: '3', text: 'Teeter totters teeter and tot', voice: 'en' },
-      ]
+      sounds: []
     }
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(text, voice) {
+    fetch('https://sound-of-text-3ba84.firebaseapp.com/sounds', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text: text, voice: voice })
+    }).then(response => {
+      return response.json();
+    }).then(json => {
+      return storage.ref(json.path).getDownloadURL();
+    }).then(url => {
+      const newSound = {
+        id: Math.floor(Math.random() * 100),
+        text: text,
+        voice: voice,
+        url: url
+      };
+
+      this.setState(prevState => {
+        return { sounds: [newSound].concat(prevState.sounds) }
+      });
+    });
   }
 
   render(){
     return (
       <section id="app">
-        <SoundForm />
+        <SoundForm onSubmit={this.handleSubmit} />
         <h2 className="title">Sounds</h2>
         <Sounds sounds={this.state.sounds} />
       </section>
@@ -49,6 +72,8 @@ class SoundForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.props.onSubmit(this.state.text, this.state.voice);
+    this.setState({ text: '' });
   }
 
   render() {
@@ -81,29 +106,44 @@ class SoundForm extends Component {
 class Sounds extends Component {
   constructor(props) {
     super();
-
-    this.state = {
-      sounds: props.sounds
-    }
   }
 
   render() {
-    const soundElems = this.state.sounds.map(sound => {
-      return (
-        <div className="sound" key={sound.id}>
-          <h3 className="sound__text">{sound.text}</h3>
-          <div className="sound__voice">{sound.voice}</div>
-          <div className="sound__actions">
-            <button className="action">Play</button>
-            <button className="action">Download</button>
-          </div>
-        </div>
-      );
+    const soundElems = this.props.sounds.map(sound => {
+      return <Sound key={sound.id} sound={sound} />
     });
 
     return (
       <div className="sounds">
         {soundElems}
+      </div>
+    );
+  }
+}
+
+class Sound extends Component {
+  constructor() {
+    super();
+
+    this.handlePlay = this.handlePlay.bind(this);
+  }
+
+  handlePlay(e) {
+    this.audio.play();
+  }
+
+  render() {
+    const sound = this.props.sound;
+
+    return (
+      <div className="sound" key={sound.id}>
+        <h3 className="sound__text">{sound.text}</h3>
+        <div className="sound__voice">{sound.voice}</div>
+        <div className="sound__actions">
+          <button className="action" onClick={this.handlePlay}>Play</button>
+          <button className="action">Download</button>
+        </div>
+        <audio src={sound.url} ref={el => this.audio = el} />
       </div>
     );
   }
