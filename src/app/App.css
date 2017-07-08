@@ -43,7 +43,16 @@
 
 .sound__actions .action {
   flex: auto;
+  display: inline-flex;
   min-height: 45px;
   min-width: 45px;
   font-size: 1em;
+  border: 1px solid black;
+  background: lightgrey;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
