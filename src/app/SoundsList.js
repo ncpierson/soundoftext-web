@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { storage, database } from '../firebase.js';
+import base32 from 'base32';
 
 class SoundsList extends Component {
   render() {
@@ -28,12 +29,15 @@ class Sound extends Component {
       voice: voice
     }
 
-    createSound(text, voice)
-      .then(path => {
-        return saveSound(text, voice, path);
-      })
+    lookupSound(text, voice)
       .then(sound => {
-        return getDownloadUrl(sound.path);
+        if (sound) {
+          return getDownloadUrl(sound.path);
+        } else {
+          return createSound(text, voice)
+            .then(path => saveSound(text, voice, path))
+            .then(sound => getDownloadUrl(sound.path));
+        }
       })
       .then(url => {
         this.setState({
@@ -63,8 +67,22 @@ class Sound extends Component {
   }
 }
 
+function lookupSound(text, voice) {
+  const key = base32.encode(voice + text);
+  const ref = database.ref(`sounds/${key}`);
+
+  return ref.once('value').then(snapshot => {
+    if (snapshot.exists()) {
+      return snapshot.val();
+    } else {
+      return false;
+    }
+  });
+}
+
 function saveSound(text, voice, path) {
-  const soundRef = database.ref('sounds').push();
+  const key = base32.encode(voice + text);
+  const soundRef = database.ref(`sounds/${key}`);
 
   const newSound = {
     text: text,
