@@ -1,4 +1,5 @@
 import React from 'react';
+import DonateForm from './DonateForm';
 import './Contribute.css';
 
 function Contribute(props) {
@@ -13,7 +14,7 @@ function Contribute(props) {
         Donating helps pay for the time I have already put into Sound of Text
         and will help pay for new features I really want to add.
       </p>
-      <button className="donate">Make a Donation</button>
+      <DonateForm />
       <h4>Donation Goals</h4>
       <p>
         I have also set up some donation goals to make donations and their
