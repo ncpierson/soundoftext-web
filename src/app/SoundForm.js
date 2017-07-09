@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import VoiceOptions from './VoiceOptions';
 
 class SoundForm extends Component {
   constructor() {
@@ -6,7 +7,7 @@ class SoundForm extends Component {
 
     this.state = {
       text: '',
-      voice: 'en'
+      voice: 'en-US'
     };
 
     this.handleTextChange = this.handleTextChange.bind(this);
@@ -18,8 +19,8 @@ class SoundForm extends Component {
     this.setState({ text: e.target.value });
   }
 
-  handleVoiceChange(e) {
-    this.setState({ voice: e.target.value });
+  handleVoiceChange(voice) {
+    this.setState({ voice: voice });
   }
 
   handleSubmit(e) {
@@ -39,13 +40,7 @@ class SoundForm extends Component {
               rows="2" minLength="0" maxLength="100" required autoFocus
             />
           </div>
-          <div className="input-group engine__voice">
-            <label htmlFor="voice">Voice:</label>
-            <select name="voice" value={this.state.voice} onChange={this.handleVoiceChange}>
-              <option value="en">English</option>
-              <option value="es">Spanish</option>
-            </select>
-          </div>
+          <VoiceOptions onChange={this.handleVoiceChange} voice={this.state.voice} />
           <div className="button-group">
             <input type="submit" />
           </div>
