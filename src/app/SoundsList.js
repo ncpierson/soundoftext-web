@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { storage, database } from '../firebase.js';
+import { lookupVoice } from './voices';
 import base32 from 'base32';
 
 class SoundsList extends Component {
@@ -53,10 +54,12 @@ class Sound extends Component {
   }
 
   render() {
+    const voiceValue = lookupVoice(this.state.voice);
+
     return (
       <div className="sound">
         <h3 className="sound__text">{this.state.text}</h3>
-        <div className="sound__voice">{this.state.voice}</div>
+        <div className="sound__voice">{voiceValue}</div>
         <div className="sound__actions">
           <button className="action" onClick={this.handlePlay}>Play</button>
           <a className="action" href={this.state.url} target="_blank" rel="noopener noreferrer">Download</a>
