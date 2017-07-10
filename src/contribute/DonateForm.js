@@ -54,6 +54,7 @@ class DonateForm extends Component {
 
     this.stripeHandler.open({
       description: 'Donation to keep Sound of Text running',
+      panelLabel: 'Donate',
       amount: stripeAmount
     });
   }
