@@ -1,5 +1,6 @@
 import React from 'react';
 import DonateForm from './DonateForm';
+import Goals from './Goals';
 import './Contribute.css';
 
 function Contribute(props) {
@@ -20,45 +21,7 @@ function Contribute(props) {
         I have also set up some donation goals to make donations and their
         outcomes more transparent.
       </p>
-      <div className="goals">
-        <div className="goal">
-          <div className="goal__progress">
-            <div className="progress-bar">
-              [#####]
-            </div>
-          </div>
-          <h4 className="goal__title">Hosting - $5</h4>
-          <p className="goal__description">
-            This is roughly the cost of hosting the website every month. If
-            this goal isn't met, I am losing money to keep the site going.
-          </p>
-        </div>
-        <div className="goal">
-          <div className="goal__progress">
-            <div className="progress-bar">
-              [##---]
-            </div>
-          </div>
-          <h4 className="goal__title">Maintenance - $20</h4>
-          <p className="goal__description">
-            In addition to the cost of hosting, I spend time working on this
-            pretty much every month for some reason or another.
-          </p>
-        </div>
-        <div className="goal">
-          <div className="goal__progress">
-            <div className="progress-bar">
-              [-----]
-            </div>
-          </div>
-          <h4 className="goal__title">New Features - $100</h4>
-          <p className="goal__description">
-            Adding new features can take me several hours. If this goal is
-            met, I promise a new feature will be added. Progress toward this
-            goal is only reset once full.
-          </p>
-        </div>
-      </div>
+      <Goals />
       <h3>Vote</h3>
       <p>Want a new feature added? Vote on what you would like.</p>
       <p>
