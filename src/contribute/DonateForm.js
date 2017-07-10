@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+const donationsApi = 'https://sound-of-text-3ba84.firebaseapp.com/donations';
+
 class DonateForm extends Component {
   constructor() {
     super();
@@ -8,11 +10,52 @@ class DonateForm extends Component {
       amount: 5
     }
 
+    this.handleToken = this.handleToken.bind(this);
     this.handleAmountChange = this.handleAmountChange.bind(this);
+    this.handleDonateClick = this.handleDonateClick.bind(this);
+
+    this.stripeHandler = window.StripeCheckout.configure({
+      key: 'pk_test_8qABw2drK8NX6pFmbzQG399U',
+      name: 'Sound of Text',
+      locale: 'auto',
+      token: this.handleToken
+    });
+  }
+
+  handleToken(token) {
+    const tokenId = token.id;
+    const stripeAmount = this.state.amount * 100;
+
+    const fetchOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ token: tokenId, amount: stripeAmount })
+    };
+
+    fetch(donationsApi, fetchOptions)
+      .then(response => {
+        return response.json();
+      }).then(json => {
+        // save donation to database
+        // TODO show donation successful or something
+      });
+
+    return null;
   }
 
   handleAmountChange(amount) {
-    this.setState({ amount: amount });
+    this.setState({ amount: Number(amount) });
+  }
+
+  handleDonateClick(e) {
+    e.preventDefault();
+
+    const stripeAmount = this.state.amount * 100;
+
+    this.stripeHandler.open({
+      description: 'Donation to keep Sound of Text running',
+      amount: stripeAmount
+    });
   }
 
   render() {
@@ -27,7 +70,7 @@ class DonateForm extends Component {
             <Amount amount="25" onClick={this.handleAmountChange} />
             <CustomAmount amount={amount} onChange={this.handleAmountChange} />
           </div>
-          <button className="donate">Donate</button>
+          <button className="donate" onClick={this.handleDonateClick}>Donate</button>
         </form>
       </div>
     );

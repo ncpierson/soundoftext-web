@@ -12,6 +12,7 @@
     "public": "build",
     "rewrites": [
       { "source": "/sounds", "function": "sounds" },
+      { "source": "/donations", "function": "donations" },
       { "source": "**", "destination": "/index.html" }
     ]
   }
