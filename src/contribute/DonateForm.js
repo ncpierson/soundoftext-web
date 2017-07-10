@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { database } from '../firebase';
 
 const donationsApi = 'https://sound-of-text-3ba84.firebaseapp.com/donations';
 
@@ -36,11 +37,10 @@ class DonateForm extends Component {
       .then(response => {
         return response.json();
       }).then(json => {
-        // save donation to database
-        // TODO show donation successful or something
+        // assume successful
+        const chargeRef = database.ref('donations').push();
+        chargeRef.set(json.charge);
       });
-
-    return null;
   }
 
   handleAmountChange(amount) {
