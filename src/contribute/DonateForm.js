@@ -117,7 +117,7 @@ class CustomAmount extends Component {
   }
 
   render() {
-    const amount = this.props.amount;
+    const amount = String(this.props.amount);
 
     return (
       <div className="amount amount--custom">
