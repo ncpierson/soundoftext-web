@@ -1,19 +1,57 @@
 import React, { Component } from 'react';
 import { Circle } from 'rc-progress';
+import { database } from '../firebase';
 
 class Goals extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      monthProgress: 0,
+      featureProgress: 0
+    };
+  }
+
+  componentDidMount() {
+    const now = new Date();
+    const monthStart = new Date(now.getFullYear(), now.getMonth());
+    const monthStartTime = monthStart.getTime() / 1000; // milliseconds -> seconds
+
+    database.ref('donations')
+      .orderByChild('created')
+      .once('value')
+      .then(snapshot => {
+        const allCharges = Object.values(snapshot.val());
+        const allDonations = allCharges.map(toDonation);
+
+        const totalDonated = allDonations.reduce(sumDonations, 0);
+        const featureProgress = totalDonated % 100;
+
+        const monthDonations = allDonations.filter(c => c.created > monthStartTime);
+        const monthProgress = monthDonations.reduce(sumDonations, 0);
+
+        this.setState({
+          monthProgress: Math.round(monthProgress),
+          featureProgress: Math.round(featureProgress)
+        });
+      });
+  }
+
   render() {
+    const monthProgress = this.state.monthProgress;
+    const featureProgress = this.state.featureProgress;
+
     return (
       <div className="goals">
-        <Goal name="Hosting" target={5} progress={17}>
+        <Goal name="Hosting" target={5} progress={monthProgress}>
           This is roughly the cost of hosting the website every month. If
           this goal isn't met, I am losing money to keep the site going.
         </Goal>
-        <Goal name="Maintenance" target={20} progress={17}>
+        <Goal name="Maintenance" target={20} progress={monthProgress}>
           In addition to the cost of hosting, I spend time working on this
           pretty much every month for some reason or another.
         </Goal>
-        <Goal name="New Feature" target={100} progress={17}>
+        <Goal name="New Feature" target={100} progress={featureProgress}>
           Adding new features can take me several hours. If this goal is
           met, I promise a new feature will be added. Progress toward this
           goal is only reset once full.
@@ -27,9 +65,10 @@ class Goal extends Component {
   render() {
     const name = this.props.name;
     const target = this.props.target;
-    const title = `${name} - $${target}`;
+    const progress = Math.min(this.props.progress, target);
 
-    const progress = this.props.progress;
+    const title = `${name} - $${progress} / $${target}`;
+
     const percent = (progress / target) * 100;
 
     return (
@@ -47,6 +86,17 @@ class Goal extends Component {
       </div>
     );
   }
+}
+
+function toDonation(charge) {
+  return {
+    amount: charge.amount / 100,
+    created: charge.created
+  };
+}
+
+function sumDonations(sum, donation) {
+  return sum + donation.amount;
 }
 
 export default Goals;
