@@ -18,8 +18,7 @@ class Goals extends Component {
 
     database.ref('donations')
       .orderByChild('created')
-      .once('value')
-      .then(snapshot => {
+      .on('value', snapshot => {
         const allCharges = Object.values(snapshot.val());
         const allDonations = allCharges.map(toDonation);
 
