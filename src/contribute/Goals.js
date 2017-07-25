@@ -14,8 +14,7 @@ class Goals extends Component {
 
   componentDidMount() {
     const now = new Date();
-    const monthStart = new Date(now.getFullYear(), now.getMonth());
-    const monthStartTime = monthStart.getTime() / 1000; // milliseconds -> seconds
+    const monthStart = Date.UTC(now.getUTCFullYear(), now.getUTCMonth()) / 1000;
 
     database.ref('donations')
       .orderByChild('created')
@@ -27,7 +26,7 @@ class Goals extends Component {
         const totalDonated = allDonations.reduce(sumDonations, 0);
         const featureProgress = totalDonated % 100;
 
-        const monthDonations = allDonations.filter(c => c.created > monthStartTime);
+        const monthDonations = allDonations.filter(c => c.created >= monthStart);
         const monthProgress = monthDonations.reduce(sumDonations, 0);
 
         this.setState({
