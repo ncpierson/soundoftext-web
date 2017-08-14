@@ -19,8 +19,7 @@ class Goals extends Component {
     database.ref('donations')
       .orderByChild('created')
       .on('value', snapshot => {
-        const allCharges = Object.values(snapshot.val());
-        const allDonations = allCharges.map(toDonation);
+        const allDonations = snapshotToList(snapshot);
 
         const totalDonated = allDonations.reduce(sumDonations, 0);
         const featureProgress = totalDonated % 100;
@@ -86,15 +85,14 @@ class Goal extends Component {
   }
 }
 
-function toDonation(charge) {
-  return {
-    amount: charge.amount / 100,
-    created: charge.created
-  };
-}
-
 function sumDonations(sum, donation) {
   return sum + donation.amount;
+}
+
+function snapshotToList(snapshot) {
+  const list = [];
+  snapshot.forEach(child => { list.push(child.val()); });
+  return list;
 }
 
 export default Goals;

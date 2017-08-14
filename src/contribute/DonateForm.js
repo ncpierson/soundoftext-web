@@ -37,9 +37,8 @@ class DonateForm extends Component {
       .then(response => {
         return response.json();
       }).then(json => {
-        // assume successful
-        const chargeRef = database.ref('donations').push();
-        chargeRef.set(json.charge);
+        // TODO error handling?
+        database.ref('donations').push().set(json.donation);
       });
   }
 
