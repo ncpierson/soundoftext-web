@@ -54,7 +54,7 @@ const voices = [
 ];
 
 function lookupVoice(key) {
-  const voice = voices.find(v => v.key == key);
+  const voice = voices.find(v => v.key === key);
   return voice ? voice.value : null;
 }
 

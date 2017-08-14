@@ -6,7 +6,7 @@ function About(props) {
       <h2 className="title">About</h2>
       <p>
         Sound of Text was originally created to help
-        <a href="http://twitter.com/NickOnTheWeb" target="_blank">myself</a>
+        <a href="http://twitter.com/NickOnTheWeb">myself</a>
         learn Spanish. I wanted a website that could generate sound files
         so that I could download and attach them to
         <a href="http://apps.ankiweb.net">Anki</a> flash cards.
@@ -20,7 +20,7 @@ function About(props) {
       <p>
         <strong>Have a suggestion?</strong>
         I would love to hear it!
-        <a href="http://twitter.com/NickOnTheWeb" target="_blank">Tweet at me</a>
+        <a href="http://twitter.com/NickOnTheWeb">Tweet at me</a>
         or send me an email at
         <a href="mailto:contact@soundoftext.com">contact@soundoftext.com</a>.
       </p>
