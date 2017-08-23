@@ -20,9 +20,9 @@ class VoiceOptions extends Component {
     });
 
     return (
-      <div className="input-group engine__voice">
-        <label htmlFor="voice">Voice:</label>
-        <select name="voice" value={voice} onChange={this.onVoiceSelected}>
+      <div className="field">
+        <label className="field__label" htmlFor="voice">Voice</label>
+        <select className="field__select" name="voice" value={voice} onChange={this.onVoiceSelected}>
           {voiceElems}
         </select>
       </div>

@@ -5,14 +5,60 @@ import base32 from 'base32';
 
 class SoundsList extends Component {
   render() {
-    const soundElems = this.props.sounds.map(sound => {
+    const $sounds = this.props.sounds.map(sound => {
       const key = `${sound.voice}/${sound.text}`
       return <Sound key={key} sound={sound} />
     });
 
+    const noSounds = $sounds.length === 0;
+
     return (
       <div className="sounds">
-        {soundElems}
+        { noSounds && (
+          <SoundsPlaceholder />
+        ) }
+        { $sounds }
+      </div>
+    );
+  }
+}
+
+class SoundsPlaceholder extends Component {
+  state = {
+    needsHelp: false
+  }
+
+  handleHelpClick = () => {
+    this.setState({ needsHelp: true });
+  }
+
+  render() {
+    const needsHelp = this.state.needsHelp;
+
+    return (
+      <div className="well">
+        <h2 className="well__title">
+          <span>No sounds</span>
+          <span className="smiley">:(</span>
+        </h2>
+        { needsHelp ? (
+          <div className="help">
+            <h3 className="help__text">Instructions:</h3>
+            <ol className="help__steps">
+              <li className="help__step">
+                In the first text box, enter a word or phrase that you want to hear spoken.
+              </li>
+              <li className="help__step">
+                Choose the most correct voice for the text you entered.
+              </li>
+              <li className="help__step">
+                Hit Submit!
+              </li>
+            </ol>
+          </div>
+        ) : (
+          <a className="well__link" onClick={this.handleHelpClick}>Need help?</a>
+        ) }
       </div>
     );
   }

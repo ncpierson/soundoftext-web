@@ -31,18 +31,19 @@ class SoundForm extends Component {
 
   render() {
     return (
-      <div className="engine">
+      <div className="app">
         <form onSubmit={this.handleSubmit}>
-          <div className="input-group engine__text">
-            <label htmlFor="text">Text:</label>
+          <div className="field">
+            <label className="field__label" htmlFor="text">Text</label>
             <textarea
               name="text" onChange={this.handleTextChange} value={this.state.text}
-              rows="2" minLength="0" maxLength="100" required autoFocus
+              className="field__textarea" rows="2" minLength="0" maxLength="100"
+              required autoFocus
             />
           </div>
           <VoiceOptions onChange={this.handleVoiceChange} voice={this.state.voice} />
-          <div className="button-group">
-            <input type="submit" />
+          <div className="field">
+            <input className="field__submit" type="submit" />
           </div>
         </form>
       </div>
