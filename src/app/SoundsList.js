@@ -13,7 +13,7 @@ class SoundsList extends Component {
     const noSounds = $sounds.length === 0;
 
     return (
-      <div className="sounds">
+      <div className={'sounds ' + (noSounds ? 'sounds--empty' : '')}>
         <h2 className="sounds__title">Sounds</h2>
         { noSounds && (
           <SoundsPlaceholder />
