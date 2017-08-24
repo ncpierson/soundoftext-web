@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import VoiceOptions from './VoiceOptions';
+import './SoundForm.css';
 
 class SoundForm extends Component {
   constructor() {

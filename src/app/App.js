@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import SoundForm from './SoundForm';
-import SoundsList from './SoundsList';
+import SoundForm from './SoundForm/SoundForm.js';
+import SoundsList from './SoundsList/SoundsList.js';
 import 'whatwg-fetch';
 import './App.css';
 

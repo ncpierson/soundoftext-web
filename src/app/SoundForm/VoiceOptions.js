@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import voices from './voices';
+import voices from '../voices';
 
 class VoiceOptions extends Component {
   constructor() {

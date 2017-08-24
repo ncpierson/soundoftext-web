@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { storage, database } from '../firebase.js';
-import { lookupVoice } from './voices';
+import { storage, database } from '../../firebase.js';
+import { lookupVoice } from '../voices';
 import base32 from 'base32';
+import './SoundsList.css';
 
 class SoundsList extends Component {
   render() {
