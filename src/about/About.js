@@ -1,36 +1,35 @@
 import React from 'react';
+import './About.css';
+import twitterLogo from './twitter-logo.svg';
 
-function About(props) {
+const About = () => {
   return (
-    <section id="about">
-      <h2 className="title">About</h2>
-      <p>
-        Sound of Text was originally created to help
-        <a href="http://twitter.com/NickOnTheWeb">myself</a>
-        learn Spanish. I wanted a website that could generate sound files
-        so that I could download and attach them to
-        <a href="http://apps.ankiweb.net">Anki</a> flash cards.
+    <section className="section" id="about">
+      <h2 className="section__title">About</h2>
+      <p className="section__text">
+        Sound of Text creates MP3 audio files from text and allows you to download
+        them or play them in the browser — using the
+        {' '}<a href="https://en.wikipedia.org/wiki/Speech_synthesis">text to speech</a>{' '}
+        engine from
+        {' '}<a href={"http://translate.google.com"}>Google Translate</a>.
       </p>
-      <p>
-        Now, it is seeing quite a few users every day and I think it is the
-        best (free) website for downloading MP3 audio files from text.
-        Currently, only audio from Google Translate is available, but there is
-        potential for more voice providers in the future.
+      <p className="section__text">
+        Originally, Sound of Text was just for myself so that I could attach
+        sound to my flashcards in
+        {' '}<a href="http://apps.ankiweb.net">Anki</a>.
+        Now, thousands of people use this site for many different purposes.
       </p>
-      <p>
-        <strong>Have a suggestion?</strong>
-        I would love to hear it!
-        <a href="http://twitter.com/NickOnTheWeb">Tweet at me</a>
-        or send me an email at
-        <a href="mailto:contact@soundoftext.com">contact@soundoftext.com</a>.
-      </p>
-      <p>
-        <strong>Want to stay up to date with what I'm doing?</strong>
-        Then, please
-        <a href="http://twitter.com/NickOnTheWeb">follow me on Twitter</a>.
-        I also have a
-        <a href="http://nickpierson.me">website</a> with other projects.
-      </p>
+      <div className="highlight">
+        <div className="highlight__content">
+          <span>
+            Share your thoughts, appreciation, or feedback with me on Twitter:
+          </span>
+          <div className="link">
+            <img className="link__img" src={twitterLogo} alt="twitter logo" />
+            <a className="link__text" href="http://twitter.com/NickOnTheWeb">@NickOnTheWeb</a>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

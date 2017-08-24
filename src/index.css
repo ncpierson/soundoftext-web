@@ -9,3 +9,16 @@ body {
   font-size: 16px;
   color: #333;
 }
+
+a {
+  text-decoration: none;
+  color: #008B8B;
+}
+
+.section {
+  padding: 0 1.25rem;
+}
+
+.section__text {
+  line-height: 1.5;
+}
