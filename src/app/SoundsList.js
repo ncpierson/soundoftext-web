@@ -14,6 +14,7 @@ class SoundsList extends Component {
 
     return (
       <div className="sounds">
+        <h2 className="sounds__title">Sounds</h2>
         { noSounds && (
           <SoundsPlaceholder />
         ) }
@@ -100,14 +101,17 @@ class Sound extends Component {
   }
 
   render() {
-    const voiceValue = lookupVoice(this.state.voice);
+    const text = this.state.text;
+    const voice = lookupVoice(this.state.voice);
 
     return (
       <div className="sound">
-        <h3 className="sound__text">{this.state.text}</h3>
-        <div className="sound__voice">{voiceValue}</div>
+        <div className="sound__well">
+          <p className="sound__text">{text}</p>
+          <span className="sound__voice">{voice}</span>
+        </div>
         <div className="sound__actions">
-          <button className="action" onClick={this.handlePlay}>Play</button>
+          <a className="action" onClick={this.handlePlay}>Play</a>
           <a className="action" href={this.state.url} target="_blank" rel="noopener noreferrer">Download</a>
         </div>
         <audio src={this.state.url} ref={el => this.audio = el} />

@@ -32,7 +32,6 @@ class App extends Component {
     return (
       <section id="app">
         <SoundForm onSubmit={this.handleSubmit} />
-        <h2 className="title">Sounds</h2>
         <SoundsList sounds={this.state.sounds} />
       </section>
     );
