@@ -26,7 +26,7 @@ function Contribute(props) {
       <p>
         If you want to help monetarily but you're not into that Patreon thing,
         I totally understand. I've opened up a Stripe account just for you —
-        and you can pay as much or as little as you want.
+        and you can donate as much or as little as you want.
       </p>
       <DonateForm />
       <h3 className="section__subtitle">Translate this Site</h3>

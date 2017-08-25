@@ -44,7 +44,7 @@ class SoundForm extends Component {
           </div>
           <VoiceOptions onChange={this.handleVoiceChange} voice={this.state.voice} />
           <div className="field">
-            <input className="field__submit" type="submit" />
+            <input className="field__submit button" type="submit" />
           </div>
         </form>
       </div>

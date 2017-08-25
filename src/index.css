@@ -53,6 +53,20 @@ a.subsection__link {
   text-transform: uppercase;
 }
 
+.button {
+  display: block;
+  width: 100%;
+  min-height: 45px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem;
+  background: #008B8B;
+  border: none;
+  color: white;
+  cursor: pointer;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
 footer {
   text-align: center;
   padding: 0.5em 0;
