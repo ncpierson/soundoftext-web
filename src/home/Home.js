@@ -24,8 +24,8 @@ function Main(props) {
       <App />
       <About />
       <Social />
-      <Learn />
       <Contribute />
+      <Learn />
     </main>
   );
 }

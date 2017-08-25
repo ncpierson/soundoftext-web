@@ -11,10 +11,10 @@ function Header(props) {
             <a className="nav__link" href="#about">About</a>
           </li>
           <li className="nav__item">
-            <a className="nav__link" href="#learn">Learn</a>
+            <a className="nav__link" href="#contribute">Contribute</a>
           </li>
           <li className="nav__item">
-            <a className="nav__link" href="#contribute">Contribute</a>
+            <a className="nav__link" href="#learn">Learn</a>
           </li>
         </ul>
       </nav>

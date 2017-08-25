@@ -25,6 +25,10 @@ a {
   padding: 0;
 }
 
+.section__subtitle {
+  margin: 2rem 0 1rem;
+}
+
 .section__text {
   line-height: 1.5;
   margin: 0 0 1rem;
@@ -32,6 +36,21 @@ a {
 
 .section__text:last-child {
   margin-bottom: 0;
+}
+
+.subsection {
+  background: #008B8B;
+  padding: 2rem 1.25rem;
+  text-align: center;
+  margin: 0 -1.25rem;
+}
+
+a.subsection__link {
+  display: inline-block;
+  color: white;
+  border: 1px solid white;
+  padding: 1rem;
+  text-transform: uppercase;
 }
 
 footer {
