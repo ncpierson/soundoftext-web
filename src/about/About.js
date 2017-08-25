@@ -1,6 +1,4 @@
 import React from 'react';
-import './About.css';
-import twitterLogo from './twitter-logo.svg';
 
 const About = () => {
   return (
@@ -19,17 +17,6 @@ const About = () => {
         {' '}<a href="http://apps.ankiweb.net">Anki</a>.
         Now, thousands of people use this site for many different purposes.
       </p>
-      <div className="highlight">
-        <div className="highlight__content">
-          <span>
-            Share your thoughts, appreciation, or feedback with me on Twitter:
-          </span>
-          <div className="link">
-            <img className="link__img" src={twitterLogo} alt="twitter logo" />
-            <a className="link__text" href="http://twitter.com/NickOnTheWeb">@NickOnTheWeb</a>
-          </div>
-        </div>
-      </div>
     </section>
   );
 }

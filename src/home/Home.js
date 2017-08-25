@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import Header from '../header/Header';
 import App from '../app/App';
 import About from '../about/About';
+import Social from '../social/Social';
 import Learn from '../learn/Learn';
 import Contribute from '../contribute/Contribute';
-import './Home.css';
 
 class Home extends Component {
   render() {
@@ -23,6 +23,7 @@ function Main(props) {
     <main>
       <App />
       <About />
+      <Social />
       <Learn />
       <Contribute />
     </main>

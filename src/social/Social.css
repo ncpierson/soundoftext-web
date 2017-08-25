@@ -1,10 +1,8 @@
-.highlight {
+.section--green {
   background: #008B8B;
-  margin: 0 -1.25rem;
-  padding: 1rem 1.25rem;
 }
 
-.highlight__content {
+.card {
   background: white;
   padding: 1rem;
   line-height: 1.5;
@@ -14,18 +12,18 @@
     0 1px 5px 0 rgba(0,0,0,.12);
 }
 
-.link {
+.twitter {
   display: block;
   margin-top: 0.5rem;
   font-weight: bold;
 }
 
-.link__img {
+.twitter__logo {
   height: 2rem;
   vertical-align: middle;
 }
 
-.link__text {
+.twitter__username {
   font-size: 1.25rem;
   line-height: 1;
   color: black;

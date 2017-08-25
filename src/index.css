@@ -16,9 +16,26 @@ a {
 }
 
 .section {
-  padding: 0 1.25rem;
+  padding: 2rem 1.25rem;
+}
+
+.section__title {
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+  padding: 0;
 }
 
 .section__text {
   line-height: 1.5;
+  margin: 0 0 1rem;
+}
+
+.section__text:last-child {
+  margin-bottom: 0;
+}
+
+footer {
+  text-align: center;
+  padding: 0.5em 0;
+  background: lightgrey;
 }
