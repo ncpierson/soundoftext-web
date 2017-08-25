@@ -1,33 +1,49 @@
 import React from 'react';
+import './Learn.css';
 
 function Learn(props) {
   return (
-    <section id="learn">
-      <h2 className="title">Learning Resources</h2>
+    <section id="learn" className="section section--bordered">
+      <h2 className="section__title">Learning Resources</h2>
       <p>There are many online resources to help you learn a new language.</p>
       <p>If you would like to add to this list, please send me an email.</p>
       <div className="resources">
-        <div className="resource">
-          <h3><a href="https://duolingo.com">Duolingo</a></h3>
-          <p>
-            Duolingo provides guided courses and gamification for learners at
-            any level and supports many popular languages.
-          </p>
+        <div className="card resource">
+          <div className="card__content">
+            <h3 className="card__title">Duolingo</h3>
+            <p>
+              Duolingo provides guided courses and gamification for learners at
+              any level and supports many popular languages.
+            </p>
+          </div>
+          <div className="card__actions">
+            <a className="card__action" href="https://duolingo.com">Learn More</a>
+          </div>
         </div>
-        <div className="resource">
-          <h3><a href="https://memrise.com">Memrise</a></h3>
-          <p>
+        <div className="card resource">
+          <div className="card__content">
+            <h3 className="card__title">Memrise</h3>
+            <p>
             Memrise focuses on learning vocabulary with using flashcard-like
             decks created by a large community of members. There are courses
             for over 200 languages.
-          </p>
+            </p>
+          </div>
+          <div className="card__actions">
+            <a className="card__action" href="https://memrise.com">Learn More</a>
+          </div>
         </div>
-        <div className="resource">
-          <h3><a href="https://apps.ankiweb.net">Anki</a></h3>
-          <p>
-            Anki allows you to create your own flashcard decks and study how
-            and when you want on any device.
-          </p>
+        <div className="card resource">
+          <div className="card__content">
+            <h3 className="card__title">Anki</h3>
+            <p>
+              Anki allows you to create your own flashcard decks and study how
+              and when you want on any device.
+            </p>
+          </div>
+          <div className="card__actions">
+            <a className="card__action" href="https://apps.ankiweb.net">Learn More</a>
+          </div>
         </div>
       </div>
     </section>
