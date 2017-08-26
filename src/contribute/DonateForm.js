@@ -62,7 +62,7 @@ class DonateForm extends Component {
     const amount = this.state.amount;
 
     return (
-      <form>
+      <form className="form">
         <div className="amounts">
           <Amount amount="5" onClick={this.handleAmountChange} />
           <Amount amount="10" onClick={this.handleAmountChange} />
