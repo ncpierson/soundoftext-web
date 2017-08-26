@@ -19,7 +19,9 @@ class SoundsList extends Component {
           <h2 className="section__title section__title--white section__title--small">Sounds</h2>
         ) }
         { soundsExist && (
-          $sounds
+          <div className="sounds grid">
+            { $sounds }
+          </div>
         ) }
         { !soundsExist && (
           <SoundsPlaceholder />
@@ -42,26 +44,28 @@ class SoundsPlaceholder extends Component {
     const needsHelp = this.state.needsHelp;
 
     return (
-      <div>
+      <div className="sounds-placeholder">
         <h2 className="section__message">
           <span>No sounds</span>
           <span className="smiley">:(</span>
         </h2>
         { needsHelp ? (
-          <div className="card">
-            <div className="card__content">
-              <h3 className="card__title">Instructions</h3>
-              <ol className="help">
-                <li className="help__step">
-                  In the first text box, enter a word or phrase that you want to hear spoken.
-                </li>
-                <li className="help__step">
-                  Choose the most correct voice for the text you entered.
-                </li>
-                <li className="help__step">
-                  Hit Submit!
-                </li>
-              </ol>
+          <div className="grid grid--center">
+            <div className="card grid__item grid__item--solo">
+              <div className="card__content">
+                <h3 className="card__title">Instructions</h3>
+                <ol className="help">
+                  <li className="help__step">
+                    In the first text box, enter a word or phrase that you want to hear spoken.
+                  </li>
+                  <li className="help__step">
+                    Choose the most correct voice for the text you entered.
+                  </li>
+                  <li className="help__step">
+                    Hit Submit!
+                  </li>
+                </ol>
+              </div>
             </div>
           </div>
         ) : (
@@ -112,7 +116,7 @@ class Sound extends Component {
     const voice = lookupVoice(this.state.voice);
 
     return (
-      <div className="card sound">
+      <div className="card grid__item sound">
         <div className="card__content sound__content">
           <p className="sound__text">{text}</p>
           <span className="sound__voice">{voice}</span>

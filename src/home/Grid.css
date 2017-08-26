@@ -1,0 +1,47 @@
+.grid {
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.grid__item {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.grid__item:last-child {
+  margin-bottom: 0;
+}
+
+.grid__item--solo {
+  margin-bottom: 0;
+}
+
+@media (min-width: 600px) {
+  .grid {
+    justify-content: space-between;
+    margin-bottom: -2rem; /* make up for grid item margin bottom */
+  }
+
+  .grid--center {
+    justify-content: center;
+  }
+
+  .grid__item {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 1rem);
+    margin-bottom: 2rem;
+  }
+
+  .grid__item:last-child {
+    margin-bottom: 2rem;
+  }
+
+  .grid__item--solo {
+    width: 73.507%; /* 6/8 columns with 16px margins/gutters */
+  }
+
+  .grid .card__content {
+    flex: auto;
+  }
+}

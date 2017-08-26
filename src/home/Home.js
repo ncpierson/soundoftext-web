@@ -10,6 +10,7 @@ import Footer from '../footer/Footer';
 import './Section.css';
 import './Card.css';
 import './Button.css';
+import './Grid.css';
 
 class Home extends Component {
   render() {

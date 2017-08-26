@@ -62,15 +62,19 @@ class DonateForm extends Component {
     const amount = this.state.amount;
 
     return (
-      <form className="form">
-        <div className="amounts">
-          <Amount amount="5" onClick={this.handleAmountChange} />
-          <Amount amount="10" onClick={this.handleAmountChange} />
-          <Amount amount="25" onClick={this.handleAmountChange} />
-          <CustomAmount amount={amount} onChange={this.handleAmountChange} />
+      <div className="donate">
+        <div className="grid grid--center">
+          <form className="grid__item grid__item--solo">
+            <div className="amounts">
+              <Amount amount="5" onClick={this.handleAmountChange} />
+              <Amount amount="10" onClick={this.handleAmountChange} />
+              <Amount amount="25" onClick={this.handleAmountChange} />
+              <CustomAmount amount={amount} onChange={this.handleAmountChange} />
+            </div>
+            <button className="button" onClick={this.handleDonateClick}>Donate</button>
+          </form>
         </div>
-        <button className="button" onClick={this.handleDonateClick}>Donate</button>
-      </form>
+      </div>
     );
   }
 }
