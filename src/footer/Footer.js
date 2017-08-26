@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Footer.css';
 import iconTwitter from './icon-twitter.svg';
 import iconEmail from './icon-email.svg';

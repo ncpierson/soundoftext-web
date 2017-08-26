@@ -91,6 +91,8 @@ a {
   border: 1px solid white;
   padding: 1rem;
   text-transform: uppercase;
+  border-radius: 2px;
+  width: 100%;
 }
 
 /** Cards **/
@@ -100,6 +102,8 @@ a {
   padding: 1rem;
   line-height: 1.5;
   margin-bottom: 1rem;
+  border-radius: 2px;
+  overflow: hidden;
   box-shadow:
     0 2px 2px 0 rgba(0,0,0,.14),
     0 3px 1px -2px rgba(0,0,0,.2),
@@ -146,7 +150,12 @@ a {
   padding: 0.5rem;
   background: #008B8B;
   border: none;
+  border-radius: 2px;
   color: white;
   cursor: pointer;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 2px 2px 0 rgba(0,0,0,.14),
+    0 3px 1px -2px rgba(0,0,0,.2),
+    0 1px 5px 0 rgba(0,0,0,.12);
 }

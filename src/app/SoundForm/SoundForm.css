@@ -18,6 +18,7 @@
   min-height: 45px;
   font-size: 1rem;
   padding: 0.5rem;
+  border-radius: 2px;
 }
 
 textarea.field__textarea {
