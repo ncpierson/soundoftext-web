@@ -63,11 +63,26 @@
 
 @media (min-width: 480px) {
   .section {
-    padding: 2rem;
+    padding: 3rem 2rem;
   }
 
   .section--embedded {
     margin-left: -2rem;
     margin-right: -2rem;
+  }
+
+  .section--last {
+    margin-bottom: -3rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .section--last {
+    margin-bottom: -4rem;
   }
 }
