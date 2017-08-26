@@ -74,4 +74,16 @@
   text-transform: uppercase;
   border-radius: 2px;
   width: 100%;
+  max-width: 300px;
+}
+
+@media (min-width: 480px) {
+  .section {
+    padding: 2rem;
+  }
+
+  .section--embedded {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
 }

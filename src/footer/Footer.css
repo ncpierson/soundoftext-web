@@ -1,7 +1,7 @@
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 2rem 1.25rem;
+  padding: 1rem 1.25rem;
 }
 
 .footer__link {
@@ -15,4 +15,11 @@
 
 .icon {
   height: 1rem;
+}
+
+@media (min-width: 480px) {
+  .footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
