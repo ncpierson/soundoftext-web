@@ -7,6 +7,10 @@ import Learn from '../learn/Learn';
 import Contribute from '../contribute/Contribute';
 import Footer from '../footer/Footer';
 
+import './Section.css';
+import './Card.css';
+import './Button.css';
+
 class Home extends Component {
   render() {
     return (
