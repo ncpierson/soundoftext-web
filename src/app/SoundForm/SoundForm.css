@@ -28,7 +28,7 @@ textarea.field__textarea {
   line-height: 1.5;
 }
 
-textarea.field__textarea:focus {
+textarea.field__textarea:focus, select.field__select:focus {
   border: 1px solid #FFF;
   outline: #008B8B auto 5px;
 }
