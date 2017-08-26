@@ -4,7 +4,7 @@ import twitterLogo from './twitter-logo.svg';
 
 const Social = () => {
   return (
-    <section className="section section--green" id="about">
+    <section className="section section--colored" id="about">
       <div className="card">
         <span>
           Share your thoughts, appreciation, or feedback with me on Twitter:

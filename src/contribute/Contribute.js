@@ -17,8 +17,8 @@ function Contribute(props) {
         I will try to host regular polls and engage with the community to see
         what you want — as well as rewarding users who decide to donate.
       </p>
-      <div className="subsection">
-        <a className="subsection__link" href="https://www.patreon.com/nickpierson">
+      <div className="section section--centered section--colored section--embedded">
+        <a className="section__button" href="https://www.patreon.com/nickpierson">
           Become a Patron
         </a>
       </div>

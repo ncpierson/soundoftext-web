@@ -1,5 +1,4 @@
 import React from 'react';
-import './Learn.css';
 
 function Learn(props) {
   return (
@@ -7,7 +6,7 @@ function Learn(props) {
       <h2 className="section__title">Learning Resources</h2>
       <p>There are many online resources to help you learn a new language.</p>
       <p>If you would like to add to this list, please send me an email.</p>
-      <div className="resources">
+      <div className="section section--embedded section--colored section--last resources">
         <div className="card resource">
           <div className="card__content">
             <h3 className="card__title">Duolingo</h3>

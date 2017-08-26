@@ -1,30 +1,9 @@
 .sounds {
   display: flex;
   flex-direction: column;
-  padding: 2rem 1.25rem;
-  background: #008B8B;
-}
-
-.sounds--empty h2.sounds__title {
-  display: none;
-}
-
-h2.sounds__title {
-  margin: 0 0 0.5rem;
-  color: white;
-  font-weight: normal;
-  font-size: 1.25rem;
 }
 
 /** Empty Sounds **/
-
-h2.well__title {
-  font-size: 2rem;
-  text-align: center;
-  text-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
-  color: transparent;
-  margin: 0 0 2rem;
-}
 
 .smiley {
   margin-left: 1.5rem;
@@ -33,30 +12,8 @@ h2.well__title {
   transform: rotate(90deg) translateX(0.25rem);
 }
 
-a.well__link {
-  display: block;
-  color: hsl(180, 50%, 95%);
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.help {
-  background: white;
-  padding: 1rem;
-  box-shadow:
-    0 2px 2px 0 rgba(0,0,0,.14),
-    0 3px 1px -2px rgba(0,0,0,.2),
-    0 1px 5px 0 rgba(0,0,0,.12);
-}
-
-h3.help__text {
-  font-weight: 600;
-  font-size: 1rem;
-  margin: 0;
-}
-
-ol.help__steps {
-  padding-left: 1rem;
+ol.help {
+  padding-left: 1.15rem;
   margin-bottom: 0;
 }
 
@@ -70,23 +27,11 @@ li.help__step:last-child {
 
 /** Sounds **/
 
-.sound {
-  margin-bottom: 1rem;
-  background: white;
-  box-shadow:
-    0 2px 2px 0 rgba(0,0,0,.14),
-    0 3px 1px -2px rgba(0,0,0,.2),
-    0 1px 5px 0 rgba(0,0,0,.12);
-}
-
-.sound:last-child {
-  margin-bottom: 0;
-}
-
-.sound__well {
+.sound__content {
   position: relative;
   padding: 2.5rem 1rem 1rem;
   background: #F5F5F5;
+  margin: -1rem -1rem 0;
 }
 
 .sound__text {
@@ -100,25 +45,4 @@ li.help__step:last-child {
   top: 0.5rem;
   left: 1rem;
   font-size: 0.75rem;
-}
-
-.sound__actions {
-  display: flex;
-  padding: 0 1rem;
-}
-
-a.action {
-  display: inline-block;
-  min-width: 45px;
-  font-size: 1rem;
-  color: #008B8B;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1rem 0;
-  margin-right: 1rem;
-}
-
-a.action:last-child {
-  margin-right: 0;
 }
