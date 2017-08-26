@@ -1,6 +1,6 @@
 import React from 'react';
 import './Social.css';
-import twitterLogo from './twitter-logo.svg';
+import iconTwitter from '../footer/icon-twitter.svg';
 
 const Social = () => {
   return (
@@ -10,7 +10,7 @@ const Social = () => {
           Share your thoughts, appreciation, or feedback with me on Twitter:
         </span>
         <div className="twitter">
-          <img className="twitter__logo" src={twitterLogo} alt="twitter logo" />
+          <img className="twitter__logo" src={iconTwitter} alt="twitter logo" />
           <a className="twitter__username" href="http://twitter.com/NickOnTheWeb">@NickOnTheWeb</a>
         </div>
       </div>

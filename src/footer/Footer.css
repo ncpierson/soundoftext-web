@@ -1,0 +1,18 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1.25rem;
+}
+
+.footer__link {
+  margin-right: 1rem;
+}
+
+.footer__link:last-child {
+  margin-right: 0;
+}
+
+.icon {
+  height: 1rem;
+  vertical-align: middle;
+}

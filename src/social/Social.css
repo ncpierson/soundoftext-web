@@ -2,16 +2,16 @@
   display: block;
   margin-top: 0.5rem;
   font-weight: bold;
+  font-size: 1.25rem;
 }
 
 .twitter__logo {
-  height: 2rem;
+  height: 0.8em;
   vertical-align: middle;
+  margin-right: 0.25rem;
 }
 
 .twitter__username {
-  font-size: 1.25rem;
-  line-height: 1;
   color: black;
   vertical-align: middle;
 }
