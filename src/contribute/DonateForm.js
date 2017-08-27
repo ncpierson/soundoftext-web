@@ -15,7 +15,7 @@ class DonateForm extends Component {
     this.handleDonateClick = this.handleDonateClick.bind(this);
 
     this.stripeHandler = window.StripeCheckout.configure({
-      key: 'pk_test_8qABw2drK8NX6pFmbzQG399U',
+      key: 'pk_live_URckThi75hi6SJSNus2TEGQp',
       name: 'Sound of Text',
       locale: 'auto',
       token: this.handleToken
