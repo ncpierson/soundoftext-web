@@ -8,6 +8,7 @@
     "rc-progress": "^2.2.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-ga": "^2.2.0",
     "react-scripts": "1.0.10",
     "whatwg-fetch": "^2.0.3"
   },
