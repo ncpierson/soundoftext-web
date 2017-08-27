@@ -1,4 +1,5 @@
 import React from 'react';
+import { OutboundLink } from 'react-ga';
 import DonateForm from './DonateForm';
 import './Contribute.css';
 
@@ -21,12 +22,13 @@ function Contribute(props) {
       </div>
       <div className="section section--colored">
         <div className="grid">
-          <a
+          <OutboundLink
+            eventLabel="patreon"
+            to="https://www.patreon.com/nickpierson"
             className="grid__item grid__item--solo button button--white"
-            href="https://www.patreon.com/nickpierson"
           >
             Become a Patron
-          </a>
+          </OutboundLink>
         </div>
       </div>
       <div className="section">
