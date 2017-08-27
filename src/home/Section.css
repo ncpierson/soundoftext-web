@@ -1,22 +1,19 @@
 .section {
   padding: 2rem 1rem;
   background: white;
+  box-shadow:
+    0 2px 2px 0 rgba(0,0,0,.14),
+    0 3px 1px -2px rgba(0,0,0,.2),
+    0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 .section--colored {
-  background: #008B8B;
-}
-
-.section--embedded {
-  margin: 2rem -1rem 0;
+  background: none;
+  box-shadow: none;
 }
 
 .section--bordered {
   border-top: 1px solid lightgrey;
-}
-
-.section--last {
-  margin-bottom: -2rem;
 }
 
 .section__title {
@@ -27,6 +24,7 @@
 
 .section__title--white {
   color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .section__title--small {
@@ -35,8 +33,13 @@
 }
 
 .section__subtitle {
+  font-weight: 600;
   font-size: 1.15rem;
-  margin: 2rem 0 1rem;
+  margin: 0 0 1rem;
+}
+
+.section__text + .section__subtitle {
+  margin-top: 2rem;
 }
 
 .section__text {
@@ -66,33 +69,21 @@
   .section {
     padding: 4rem 1.5rem;
   }
-
-  .section--embedded {
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
-  }
-
-  .section--last {
-    margin-bottom: -4rem;
-  }
 }
 
 @media (min-width: 960px) {
   .section {
     padding: 6rem 2.5rem;
+    max-width: 800px;
+    margin: 0 auto;
   }
 
-  .section--embedded {
-    margin-left: -2.5rem;
-    margin-right: -2.5rem;
+  .section__title--white {
+    width: calc(75% - (1.5rem * 0.25));
+    margin: 0 auto 1rem;
   }
 
-  .section--last {
-    margin-bottom: -6rem;
-  }
-
-  .section__subtitle {
+  .section__text + .section__subtitle {
     margin-top: 3rem;
-    font-weight: 600;
   }
 }

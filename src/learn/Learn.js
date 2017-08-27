@@ -2,11 +2,13 @@ import React from 'react';
 
 function Learn(props) {
   return (
-    <section id="learn" className="section section--bordered">
-      <h2 className="section__title">Learning Resources</h2>
-      <p>There are many online resources to help you learn a new language.</p>
-      <p>If you would like to add to this list, please send me an email.</p>
-      <div className="section section--embedded section--colored section--last">
+    <section id="learn" className="">
+      <div className="section section--bordered">
+        <h2 className="section__title">Learning Resources</h2>
+        <p>There are many online resources to help you learn a new language.</p>
+        <p>If you would like to add to this list, please send me an email.</p>
+      </div>
+      <div className="section section--colored">
         <div className="grid">
           <div className="card grid__item">
             <div className="card__content">

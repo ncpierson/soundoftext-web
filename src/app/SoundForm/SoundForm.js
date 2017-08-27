@@ -33,7 +33,7 @@ class SoundForm extends Component {
   render() {
     return (
       <div className="section">
-        <div className="grid grid--center">
+        <div className="grid">
           <form className="grid__item grid__item--solo" onSubmit={this.handleSubmit}>
             <div className="field">
               <label className="field__label" htmlFor="text">Text</label>

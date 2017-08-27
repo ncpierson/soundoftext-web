@@ -50,8 +50,8 @@ class SoundsPlaceholder extends Component {
           <span className="smiley">:(</span>
         </h2>
         { needsHelp ? (
-          <div className="grid grid--center">
-            <div className="card grid__item grid__item--solo">
+          <div className="grid">
+            <div className="card grid__item">
               <div className="card__content">
                 <h3 className="card__title">Instructions</h3>
                 <ol className="help">

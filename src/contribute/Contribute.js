@@ -4,13 +4,13 @@ import './Contribute.css';
 
 function Contribute(props) {
   return (
-    <section id="contribute" className="section">
-      <h2 className="section__title">Contribute</h2>
-      <p className="section__text">
-        This website doesn't run for free. I appreciate anything you do to help!
-        You can support me on Patreon, donate directly, or help translate the site.
-      </p>
-      <div>
+    <section id="contribute">
+      <div className="section">
+        <h2 className="section__title">Contribute</h2>
+        <p className="section__text">
+          This website doesn't run for free. I appreciate anything you do to help!
+          You can support me on Patreon, donate directly, or help translate the site.
+        </p>
         <h3 className="section__subtitle">Patreon</h3>
         <p className="section__text">
           I recently started a Patreon and I'm hoping for this to be the best way
@@ -18,27 +18,29 @@ function Contribute(props) {
           I will try to host regular polls and engage with the community to see
           what you want — as well as rewarding users who decide to donate.
         </p>
-        <div className="section section--colored section--embedded">
-          <div className="grid grid--center">
-            <a
-              className="grid__item grid__item--solo button button--white"
-              href="https://www.patreon.com/nickpierson"
-            >
-              Become a Patron
-            </a>
-          </div>
+      </div>
+      <div className="section section--colored">
+        <div className="grid">
+          <a
+            className="grid__item grid__item--solo button button--white"
+            href="https://www.patreon.com/nickpierson"
+          >
+            Become a Patron
+          </a>
         </div>
       </div>
-      <div>
-        <h3 className="section__subtitle">Donate</h3>
-        <p className="section__text">
-          If you want to help monetarily but you're not into that Patreon thing,
-          I totally understand. I've opened up a Stripe account just for you —
-          and you can donate as much or as little as you want.
-        </p>
-        <DonateForm />
+      <div className="section">
+        <div>
+          <h3 className="section__subtitle">Donate</h3>
+          <p className="section__text">
+            If you want to help monetarily but you're not into that Patreon thing,
+            I totally understand. I've opened up a Stripe account just for you —
+            and you can donate as much or as little as you want.
+          </p>
+          <DonateForm />
+        </div>
       </div>
-      <div className="border-top">
+      <div className="section section--bordered">
         <h3 className="section__subtitle">Translate this Site</h3>
         <p className="section__text">
           If you would like to see this site in a different language, please

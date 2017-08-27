@@ -5,7 +5,7 @@ import iconTwitter from '../footer/icon-twitter.svg';
 const Social = () => {
   return (
     <section className="section section--colored" id="about">
-      <div className="grid grid--center">
+      <div className="grid">
         <div className="card grid__item grid__item--solo">
           <span>Share your thoughts, appreciation, or feedback with me on Twitter:</span>
           <div className="twitter">

@@ -1,6 +1,7 @@
 .grid {
-  display:flex;
-  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .grid__item {
@@ -18,16 +19,11 @@
 
 @media (min-width: 600px) {
   .grid {
-    justify-content: space-between;
     margin-bottom: -1rem; /* make up for grid item margin bottom */
   }
 
-  .grid--center {
-    justify-content: center;
-  }
-
   .grid__item {
-    width: calc(50% - (1rem * 0.5));
+    width: 100%;
     margin-bottom: 1rem;
   }
 
@@ -55,7 +51,7 @@
   }
 
   .grid__item {
-    width: calc(33.333% - (1.5rem * 0.666));
+    width: calc(75% - (1.5rem * 0.25));
     margin-bottom: 1.5rem;
   }
 
