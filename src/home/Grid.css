@@ -27,8 +27,6 @@
   }
 
   .grid__item {
-    display: flex;
-    flex-direction: column;
     width: calc(50% - (1rem * 0.5));
     margin-bottom: 1rem;
   }
@@ -41,7 +39,31 @@
     width: calc(75% - (1rem * 0.25));
   }
 
+  .grid .card {
+    display: flex;
+    flex-direction: column;
+  }
+
   .grid .card__content {
     flex: auto;
+  }
+}
+
+@media (min-width: 960px) {
+  .grid {
+    margin-bottom: -1.5rem;
+  }
+
+  .grid__item {
+    width: calc(33.333% - (1.5rem * 0.666));
+    margin-bottom: 1.5rem;
+  }
+
+  .grid__item:last-child {
+    margin-bottom: 1.5rem;
+  }
+
+  .grid__item--solo {
+    width: calc(50% - (1.5rem * 0.5));
   }
 }

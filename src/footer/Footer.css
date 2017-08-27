@@ -23,3 +23,10 @@
     padding-right: 1.5rem;
   }
 }
+
+@media (min-width: 960px) {
+  .footer {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}

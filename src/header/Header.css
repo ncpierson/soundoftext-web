@@ -31,3 +31,35 @@ a.nav__link {
     padding-right: 1.5rem;
   }
 }
+
+@media (min-width: 960px) {
+  header {
+    display: flex;
+    background: #008B8B;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2.5rem;
+  }
+
+  h1.brand {
+    color: white;
+    margin: 0;
+  }
+
+  .nav {
+    padding: 0;
+  }
+
+  ul.nav__list {
+    display: block;
+  }
+
+  .nav__item {
+    display: inline-block;
+    margin-right: 1.5rem;
+  }
+
+  .nav__item:last-child {
+    margin-right: 0;
+  }
+}

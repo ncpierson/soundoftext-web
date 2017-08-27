@@ -75,3 +75,15 @@
     margin-bottom: -4rem;
   }
 }
+
+@media (min-width: 960px) {
+  .section {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .section--embedded {
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+  }
+}
