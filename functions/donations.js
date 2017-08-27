@@ -1,6 +1,6 @@
 const functions = require('firebase-functions');
 const cors = require('cors')({ origin: true });
-const stripe = require('stripe')("sk_live_2zPqnnWkpgQferm62iUDZGQ");
+const stripe = require('stripe')('sk_live_2zPqnnWkpgQferm62iUDZGQ7');
 
 const toDonation = (charge) => ({
   created: charge.created,
@@ -12,7 +12,7 @@ module.exports = functions.https.onRequest((req, res) => {
     const token = req.body.token;
     const amount = req.body.amount;
 
-    const charge = stripe.charges.create({
+    stripe.charges.create({
       amount: amount,
       currency: 'usd',
       source: token,
