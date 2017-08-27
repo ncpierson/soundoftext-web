@@ -1,14 +1,14 @@
 h1.brand {
   font-size: 2rem;
   font-weight: 700;
-  margin: 0.5em 0;
+  margin: 1rem 0;
   text-align: center;
   color: #008B8B;
 }
 
 .nav {
   background: #008B8B;
-  padding: 1rem 1.25rem;
+  padding: 1rem;
 }
 
 ul.nav__list {
@@ -25,8 +25,9 @@ a.nav__link {
   color: white;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 600px) {
   .nav {
-    padding: 1rem 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }

@@ -19,7 +19,7 @@
 @media (min-width: 600px) {
   .grid {
     justify-content: space-between;
-    margin-bottom: -2rem; /* make up for grid item margin bottom */
+    margin-bottom: -1rem; /* make up for grid item margin bottom */
   }
 
   .grid--center {
@@ -29,16 +29,16 @@
   .grid__item {
     display: flex;
     flex-direction: column;
-    width: calc(50% - 1rem);
-    margin-bottom: 2rem;
+    width: calc(50% - (1rem * 0.5));
+    margin-bottom: 1rem;
   }
 
   .grid__item:last-child {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   .grid__item--solo {
-    width: 73.507%; /* 6/8 columns with 16px margins/gutters */
+    width: calc(75% - (1rem * 0.25));
   }
 
   .grid .card__content {
