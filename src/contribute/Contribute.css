@@ -56,3 +56,9 @@
     margin-bottom: 1.5rem;
   }
 }
+
+@media (min-width: 960px) {
+  .donate {
+    margin: 3rem 0;
+  }
+}
