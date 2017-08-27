@@ -41,3 +41,9 @@ select.field__select {
 input.field__submit:focus {
   outline: none;
 }
+
+@media (min-width: 600px) {
+  .field {
+    margin-bottom: 1.5rem;
+  }
+}
