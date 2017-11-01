@@ -9,7 +9,7 @@ class DonateForm extends Component {
 
     this.state = {
       amount: 5
-    }
+    };
 
     this.handleToken = this.handleToken.bind(this);
     this.handleAmountChange = this.handleAmountChange.bind(this);
@@ -36,7 +36,8 @@ class DonateForm extends Component {
     fetch(donationsApi, fetchOptions)
       .then(response => {
         return response.json();
-      }).then(json => {
+      })
+      .then(json => {
         // TODO error handling?
         // TODO show success?
       });
@@ -69,9 +70,14 @@ class DonateForm extends Component {
               <Amount amount="5" onClick={this.handleAmountChange} />
               <Amount amount="10" onClick={this.handleAmountChange} />
               <Amount amount="25" onClick={this.handleAmountChange} />
-              <CustomAmount amount={amount} onChange={this.handleAmountChange} />
+              <CustomAmount
+                amount={amount}
+                onChange={this.handleAmountChange}
+              />
             </div>
-            <button className="button" onClick={this.handleDonateClick}>Donate</button>
+            <button className="button" onClick={this.handleDonateClick}>
+              Donate
+            </button>
           </form>
         </div>
       </div>
@@ -93,13 +99,12 @@ class Amount extends Component {
   }
 
   render() {
-    const amount= this.props.amount;
+    const amount = this.props.amount;
 
     return (
-      <button
-        className="amount"
-        onClick={this.handleClick}
-      >${amount}</button>
+      <button className="amount" onClick={this.handleClick}>
+        ${amount}
+      </button>
     );
   }
 }
@@ -124,8 +129,13 @@ class CustomAmount extends Component {
       <div className="amount amount--custom">
         <span className="amount__currency">$</span>
         <input
-          value={amount} onChange={this.handleTextChange} type="number"
-          step="0.01" min="0" max="1000.00" placeholder="Custom amount..."
+          value={amount}
+          onChange={this.handleTextChange}
+          type="number"
+          step="0.01"
+          min="0"
+          max="1000.00"
+          placeholder="Custom amount..."
           required
         />
       </div>

@@ -1,4 +1,4 @@
-
+// prettier-ignore
 const voices = [
   { key: "af-ZA", value: "Afrikaans" },
   { key: "sq",    value: "Albanian" },

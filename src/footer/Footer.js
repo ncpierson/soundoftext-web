@@ -15,8 +15,7 @@ function Footer(props) {
         </a>
       </div>
       <div className="footer__right">
-        <span>Made by</span>
-        {' '}<a href="http://nickpierson.me">Nick Pierson</a>
+        <span>Made by</span> <a href="http://nickpierson.me">Nick Pierson</a>
       </div>
     </footer>
   );

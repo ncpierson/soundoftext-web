@@ -14,25 +14,29 @@ function Learn(props) {
             <div className="card__content">
               <h3 className="card__title">Duolingo</h3>
               <p>
-                Duolingo provides guided courses and gamification for learners at
-                any level and supports many popular languages.
+                Duolingo provides guided courses and gamification for learners
+                at any level and supports many popular languages.
               </p>
             </div>
             <div className="card__actions">
-              <a className="card__action" href="https://duolingo.com">Learn More</a>
+              <a className="card__action" href="https://duolingo.com">
+                Learn More
+              </a>
             </div>
           </div>
           <div className="card grid__item">
             <div className="card__content">
               <h3 className="card__title">Memrise</h3>
               <p>
-              Memrise focuses on learning vocabulary with using flashcard-like
-              decks created by a large community of members. There are courses
-              for over 200 languages.
+                Memrise focuses on learning vocabulary with using flashcard-like
+                decks created by a large community of members. There are courses
+                for over 200 languages.
               </p>
             </div>
             <div className="card__actions">
-              <a className="card__action" href="https://memrise.com">Learn More</a>
+              <a className="card__action" href="https://memrise.com">
+                Learn More
+              </a>
             </div>
           </div>
           <div className="card grid__item">
@@ -44,7 +48,9 @@ function Learn(props) {
               </p>
             </div>
             <div className="card__actions">
-              <a className="card__action" href="https://apps.ankiweb.net">Learn More</a>
+              <a className="card__action" href="https://apps.ankiweb.net">
+                Learn More
+              </a>
             </div>
           </div>
         </div>

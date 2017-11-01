@@ -8,13 +8,19 @@ function Header(props) {
       <nav className="nav">
         <ul className="nav__list">
           <li className="nav__item">
-            <a className="nav__link" href="#about">About</a>
+            <a className="nav__link" href="#about">
+              About
+            </a>
           </li>
           <li className="nav__item">
-            <a className="nav__link" href="#contribute">Contribute</a>
+            <a className="nav__link" href="#contribute">
+              Contribute
+            </a>
           </li>
           <li className="nav__item">
-            <a className="nav__link" href="#learn">Learn</a>
+            <a className="nav__link" href="#learn">
+              Learn
+            </a>
           </li>
         </ul>
       </nav>

@@ -6,24 +6,20 @@ class SoundsList extends Component {
   render() {
     const $sounds = this.props.sounds.map(sound => {
       const key = `${sound.voice}/${sound.text}`;
-      return <Sound key={key} sound={sound} />
+      return <Sound key={key} sound={sound} />;
     });
 
     const soundsExist = $sounds.length > 0;
 
     return (
       <div className="section section--colored">
-        { soundsExist && (
-          <h2 className="section__title section__title--white section__title--small">Sounds</h2>
-        ) }
-        { soundsExist && (
-          <div className="sounds grid">
-            { $sounds }
-          </div>
-        ) }
-        { !soundsExist && (
-          <SoundsPlaceholder />
-        ) }
+        {soundsExist && (
+          <h2 className="section__title section__title--white section__title--small">
+            Sounds
+          </h2>
+        )}
+        {soundsExist && <div className="sounds grid">{$sounds}</div>}
+        {!soundsExist && <SoundsPlaceholder />}
       </div>
     );
   }
@@ -32,11 +28,11 @@ class SoundsList extends Component {
 class SoundsPlaceholder extends Component {
   state = {
     needsHelp: false
-  }
+  };
 
   handleHelpClick = () => {
     this.setState({ needsHelp: true });
-  }
+  };
 
   render() {
     const needsHelp = this.state.needsHelp;
@@ -47,28 +43,29 @@ class SoundsPlaceholder extends Component {
           <span>No sounds</span>
           <span className="smiley">:(</span>
         </h2>
-        { needsHelp ? (
+        {needsHelp ? (
           <div className="grid">
             <div className="card grid__item">
               <div className="card__content">
                 <h3 className="card__title">Instructions</h3>
                 <ol className="help">
                   <li className="help__step">
-                    In the first text box, enter a word or phrase that you want to hear spoken.
+                    In the first text box, enter a word or phrase that you want
+                    to hear spoken.
                   </li>
                   <li className="help__step">
                     Choose the most correct voice for the text you entered.
                   </li>
-                  <li className="help__step">
-                    Hit Submit!
-                  </li>
+                  <li className="help__step">Hit Submit!</li>
                 </ol>
               </div>
             </div>
           </div>
         ) : (
-          <a className="section__link" onClick={this.handleHelpClick}>Need help?</a>
-        ) }
+          <a className="section__link" onClick={this.handleHelpClick}>
+            Need help?
+          </a>
+        )}
       </div>
     );
   }
@@ -84,7 +81,7 @@ class Sound extends Component {
     this.state = {
       text: text,
       voice: voice
-    }
+    };
 
     this.handlePlay = this.handlePlay.bind(this);
   }
@@ -99,7 +96,10 @@ class Sound extends Component {
       method: 'POST'
     };
 
-    const newSound = await fetch('http://192.168.1.45:9000/sounds', fetchOptions);
+    const newSound = await fetch(
+      'http://192.168.1.45:9000/sounds',
+      fetchOptions
+    );
     const newSoundRes = await newSound.json();
     const newSoundId = newSoundRes.id;
 
@@ -127,10 +127,14 @@ class Sound extends Component {
           <span className="sound__voice">{voice}</span>
         </div>
         <div className="card__actions">
-          <a className="card__action" onClick={this.handlePlay}>Play</a>
-          <a className="card__action" href={this.state.url} download>Download</a>
+          <a className="card__action" onClick={this.handlePlay}>
+            Play
+          </a>
+          <a className="card__action" href={this.state.url} download>
+            Download
+          </a>
         </div>
-        <audio src={this.state.url} ref={el => this.audio = el} />
+        <audio src={this.state.url} ref={el => (this.audio = el)} />
       </div>
     );
   }

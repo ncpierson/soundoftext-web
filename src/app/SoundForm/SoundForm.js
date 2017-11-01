@@ -34,16 +34,30 @@ class SoundForm extends Component {
     return (
       <div className="section">
         <div className="grid">
-          <form className="grid__item grid__item--solo" onSubmit={this.handleSubmit}>
+          <form
+            className="grid__item grid__item--solo"
+            onSubmit={this.handleSubmit}
+          >
             <div className="field">
-              <label className="field__label" htmlFor="text">Text</label>
+              <label className="field__label" htmlFor="text">
+                Text
+              </label>
               <textarea
-                name="text" onChange={this.handleTextChange} value={this.state.text}
-                className="field__textarea" rows="2" minLength="0" maxLength="100"
-                required autoFocus
+                name="text"
+                onChange={this.handleTextChange}
+                value={this.state.text}
+                className="field__textarea"
+                rows="2"
+                minLength="0"
+                maxLength="100"
+                required
+                autoFocus
               />
             </div>
-            <VoiceOptions onChange={this.handleVoiceChange} voice={this.state.voice} />
+            <VoiceOptions
+              onChange={this.handleVoiceChange}
+              voice={this.state.voice}
+            />
             <div className="field">
               <input className="field__submit button" type="submit" />
             </div>
