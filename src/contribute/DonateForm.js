@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 // TODO
-const donationsApi = 'https://sound-of-text-3ba84.firebaseapp.com/donations';
+const donationsApi = 'http://192.168.1.45:9000/donations';
 
 class DonateForm extends Component {
   constructor() {
