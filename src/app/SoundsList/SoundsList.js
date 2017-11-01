@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import { storage, database } from '../../firebase.js';
 import { lookupVoice } from '../voices';
-import base32 from 'base32';
 import './SoundsList.css';
 
 class SoundsList extends Component {
   render() {
     const $sounds = this.props.sounds.map(sound => {
-      const key = `${sound.voice}/${sound.text}`
+      const key = `${sound.voice}/${sound.text}`;
       return <Sound key={key} sound={sound} />
     });
 
@@ -88,23 +86,30 @@ class Sound extends Component {
       voice: voice
     }
 
-    lookupSound(text, voice)
-      .then(sound => {
-        if (sound) {
-          return getDownloadUrl(sound.path);
-        } else {
-          return createSound(text, voice)
-            .then(path => saveSound(text, voice, path))
-            .then(sound => getDownloadUrl(sound.path));
-        }
-      })
-      .then(url => {
-        this.setState({
-          url: url
-        });
-      });
-
     this.handlePlay = this.handlePlay.bind(this);
+  }
+
+  async componentDidMount() {
+    const fetchOptions = {
+      body: JSON.stringify({
+        engine: 'Google',
+        data: this.state
+      }),
+      headers: { 'Content-Type': 'application/json' },
+      method: 'POST'
+    };
+
+    const newSound = await fetch('http://192.168.1.45:9000/sounds', fetchOptions);
+    const newSoundRes = await newSound.json();
+    const newSoundId = newSoundRes.id;
+
+    // TODO don't assume success
+    const sound = await fetch(`http://192.168.1.45:9000/sounds/${newSoundId}`);
+    const soundRes = await sound.json();
+
+    this.setState({
+      url: soundRes.location
+    });
   }
 
   handlePlay(e) {
@@ -129,51 +134,6 @@ class Sound extends Component {
       </div>
     );
   }
-}
-
-function lookupSound(text, voice) {
-  const key = base32.encode(voice + text);
-  const ref = database.ref(`sounds/${key}`);
-
-  return ref.once('value').then(snapshot => {
-    if (snapshot.exists()) {
-      return snapshot.val();
-    } else {
-      return false;
-    }
-  });
-}
-
-function saveSound(text, voice, path) {
-  const key = base32.encode(voice + text);
-  const soundRef = database.ref(`sounds/${key}`);
-
-  const newSound = {
-    text: text,
-    voice: voice,
-    path: path,
-    id: soundRef.key
-  };
-
-  return soundRef.set(newSound).then(() => newSound);
-}
-
-const soundsApi = 'https://sound-of-text-3ba84.firebaseapp.com/sounds';
-function createSound(text, voice) {
-  const fetchOptions = {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ text: text, voice: voice })
-  };
-
-  return fetch(soundsApi, fetchOptions)
-    .then(response => {
-      return response.json().then(json => json.path);
-    });
-}
-
-function getDownloadUrl(path) {
-  return storage.ref(path).getDownloadURL();
 }
 
 export default SoundsList;
