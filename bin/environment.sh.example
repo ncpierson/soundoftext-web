@@ -1,0 +1,7 @@
+#! /bin/sh
+
+export REACT_APP_DONATIONS_API="http://localhost:9000"
+
+export REACT_APP_SOUNDS_API="http://localhost:9000"
+
+export REACT_APP_STRIPE_KEY=

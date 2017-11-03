@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { lookupVoice } from '../voices';
+import { soundsApi } from '../../config';
 import './SoundsList.css';
 
 class SoundsList extends Component {
@@ -96,10 +97,7 @@ class Sound extends Component {
       method: 'POST'
     };
 
-    const soundResponse = await fetch(
-      'http://192.168.1.45:9000/sounds',
-      fetchOptions
-    );
+    const soundResponse = await fetch(`${soundsApi}/sounds`, fetchOptions);
     const responseBody = await soundResponse.json();
     const soundId = responseBody.id;
 
@@ -108,7 +106,7 @@ class Sound extends Component {
 
   // TODO don't assume success
   async awaitSound(soundId) {
-    const response = await fetch(`http://192.168.1.45:9000/sounds/${soundId}`);
+    const response = await fetch(`${soundsApi}/sounds/${soundId}`);
     const body = await response.json();
 
     if (!body.location) {

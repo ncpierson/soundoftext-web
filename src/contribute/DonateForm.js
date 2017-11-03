@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-
-// TODO
-const donationsApi = 'http://192.168.1.45:9000/donations';
+import { donationsApi, stripeKey } from '../config';
 
 class DonateForm extends Component {
   constructor() {
@@ -16,7 +14,7 @@ class DonateForm extends Component {
     this.handleDonateClick = this.handleDonateClick.bind(this);
 
     this.stripeHandler = window.StripeCheckout.configure({
-      key: 'pk_live_URckThi75hi6SJSNus2TEGQp',
+      key: stripeKey,
       name: 'Sound of Text',
       locale: 'auto',
       token: this.handleToken
@@ -33,7 +31,7 @@ class DonateForm extends Component {
       body: JSON.stringify({ token: tokenId, amount: stripeAmount })
     };
 
-    fetch(donationsApi, fetchOptions)
+    fetch(`${donationsApi}/donations`, fetchOptions)
       .then(response => {
         return response.json();
       })
