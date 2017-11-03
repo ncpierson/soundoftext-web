@@ -96,19 +96,28 @@ class Sound extends Component {
       method: 'POST'
     };
 
-    const newSound = await fetch(
+    const soundResponse = await fetch(
       'http://192.168.1.45:9000/sounds',
       fetchOptions
     );
-    const newSoundRes = await newSound.json();
-    const newSoundId = newSoundRes.id;
+    const responseBody = await soundResponse.json();
+    const soundId = responseBody.id;
 
-    // TODO don't assume success
-    const sound = await fetch(`http://192.168.1.45:9000/sounds/${newSoundId}`);
-    const soundRes = await sound.json();
+    this.awaitSound(soundId);
+  }
+
+  // TODO don't assume success
+  async awaitSound(soundId) {
+    const response = await fetch(`http://192.168.1.45:9000/sounds/${soundId}`);
+    const body = await response.json();
+
+    if (!body.location) {
+      setTimeout(() => this.awaitSound(soundId), 1000);
+      return;
+    }
 
     this.setState({
-      url: soundRes.location
+      url: body.location
     });
   }
 
