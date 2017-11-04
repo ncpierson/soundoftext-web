@@ -22,3 +22,16 @@ deploy_staging:
     url: http://staging.soundoftext.com
   only:
     - development
+
+deploy_production:
+  stage: deploy
+  script:
+    - echo "Deploying to production server"
+    - yarn
+    - REACT_APP_ENV=production yarn build
+    - scp -r build/* gitlab@production.soundoftext.com:/var/www/soundoftext.com
+  environment:
+    name: production
+    url: http://production.soundoftext.com
+  only:
+    - master
