@@ -1,0 +1,24 @@
+image: node:8.9.0
+
+stages:
+  - deploy
+
+before_script:
+  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+  - eval $(ssh-agent -s)
+  - ssh-add <(echo "$SSH_PRIVATE_KEY")
+  - mkdir -p ~/.ssh
+  - '[[ -f /.dockerenv ]] && echo "$SSH_SERVER_HOSTKEYS" > ~/.ssh/known_hosts'
+
+deploy_staging:
+  stage: deploy
+  script:
+    - echo "Deploying to staging server"
+    - yarn
+    - REACT_APP_ENV=staging yarn build
+    - scp -r build/* gitlab@staging.soundoftext.com:/var/www/staging.soundoftext.com/
+  environment:
+    name: staging
+    url: http://staging.soundoftext.com
+  only:
+    - development
