@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Spinner from 'react-spinkit';
 import { lookupVoice } from '../voices';
 import { soundsApi } from '../../config';
 import './SoundsList.css';
@@ -80,6 +81,7 @@ class Sound extends Component {
     const voice = props.sound.voice;
 
     this.state = {
+      loading: true,
       text: text,
       voice: voice
     };
@@ -115,6 +117,7 @@ class Sound extends Component {
     }
 
     this.setState({
+      loading: false,
       url: body.location
     });
   }
@@ -142,6 +145,15 @@ class Sound extends Component {
           </a>
         </div>
         <audio src={this.state.url} ref={el => (this.audio = el)} />
+        {this.state.loading && (
+          <div className="card__overlay">
+            <Spinner
+              name="line-scale-pulse-out"
+              fadeIn="none"
+              color="#008B8B"
+            />
+          </div>
+        )}
       </div>
     );
   }
