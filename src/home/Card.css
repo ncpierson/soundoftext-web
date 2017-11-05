@@ -24,12 +24,13 @@
 }
 
 .card__action {
-  display: inline-block;
   color: #008B8B;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1rem 0;
+  cursor: pointer;
+  display: inline-block;
   margin-right: 1rem;
+  padding: 1rem 0;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .card__action:last-child {
