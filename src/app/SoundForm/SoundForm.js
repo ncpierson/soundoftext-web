@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { HotKeys } from 'react-hotkeys';
 import VoiceOptions from './VoiceOptions';
 import './SoundForm.css';
 
@@ -31,6 +32,14 @@ class SoundForm extends Component {
   }
 
   render() {
+    const keyMap = {
+      submit: ['ctrl+enter', 'command+enter']
+    };
+
+    const keyHandlers = {
+      submit: () => this.submitButton.click()
+    };
+
     return (
       <div className="section">
         <div className="grid">
@@ -42,24 +51,30 @@ class SoundForm extends Component {
               <label className="field__label" htmlFor="text">
                 Text
               </label>
-              <textarea
-                name="text"
-                onChange={this.handleTextChange}
-                value={this.state.text}
-                className="field__textarea"
-                rows="2"
-                minLength="0"
-                maxLength="100"
-                required
-                autoFocus
-              />
+              <HotKeys keyMap={keyMap} handlers={keyHandlers}>
+                <textarea
+                  name="text"
+                  onChange={this.handleTextChange}
+                  value={this.state.text}
+                  className="field__textarea"
+                  rows="2"
+                  minLength="0"
+                  maxLength="100"
+                  required
+                  autoFocus
+                />
+              </HotKeys>
             </div>
             <VoiceOptions
               onChange={this.handleVoiceChange}
               voice={this.state.voice}
             />
             <div className="field">
-              <input className="field__submit button" type="submit" />
+              <input
+                className="field__submit button"
+                type="submit"
+                ref={el => (this.submitButton = el)}
+              />
             </div>
           </form>
         </div>
