@@ -22,50 +22,18 @@ class Sound extends Component {
   }
 
   getSound() {
-    return this.requestSound()
-      .then(soundId => {
-        this.awaitSound(soundId);
-      })
-      .catch(error => {
-        this.setState({
-          error: true,
-          loading: false
-        });
-      });
-  }
-
-  async requestSound() {
     const { text, voice } = this.props.sound;
 
-    const fetchOptions = {
-      body: JSON.stringify({
-        engine: 'Google',
-        data: { text, voice }
-      }),
-      headers: { 'Content-Type': 'application/json' },
-      method: 'POST'
-    };
-
-    const soundResponse = await fetch(`${soundsApi}/sounds`, fetchOptions);
-    const responseBody = await soundResponse.json();
-    const soundId = responseBody.id;
-
-    return soundId;
-  }
-
-  async awaitSound(soundId) {
-    const response = await fetch(`${soundsApi}/sounds/${soundId}`);
-    const body = await response.json();
-
-    if (!body.location) {
-      setTimeout(() => this.awaitSound(soundId), 1000);
-      return;
-    }
-
-    this.setState({
-      loading: false,
-      url: body.location
-    });
+    requestSound(text, voice)
+      .then(soundId => {
+        return awaitSound(soundId);
+      })
+      .then(location => {
+        this.setState({ loading: false, url: location });
+      })
+      .catch(error => {
+        this.setState({ error: true, loading: false });
+      });
   }
 
   handlePlay(e) {
@@ -126,6 +94,51 @@ class Sound extends Component {
       </div>
     );
   }
+}
+
+async function requestSound(text, voice) {
+  const fetchOptions = {
+    body: JSON.stringify({
+      engine: 'Google',
+      data: { text, voice }
+    }),
+    headers: { 'Content-Type': 'application/json' },
+    method: 'POST'
+  };
+
+  const soundResponse = await fetch(`${soundsApi}/sounds`, fetchOptions);
+  const responseBody = await soundResponse.json();
+  const soundId = responseBody.id;
+
+  return soundId;
+}
+
+async function awaitSound(soundId, attempts = 5, delay = 1000) {
+  if (attempts < 0) throw new Error('Too many attempts');
+
+  await timeout(delay);
+
+  const response = await fetchSound(soundId);
+
+  if (response.status === 'Error') throw new Error(response.message);
+
+  if (!response.location) {
+    return awaitSound(soundId, attempts - 1, delay * 2);
+  }
+
+  return response.location;
+}
+
+function timeout(duration) {
+  return new Promise(resolve => {
+    setTimeout(resolve, duration);
+  });
+}
+
+async function fetchSound(soundId) {
+  const response = await fetch(`${soundsApi}/sounds/${soundId}`);
+  const body = await response.json();
+  return body;
 }
 
 export default Sound;
