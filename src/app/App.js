@@ -12,6 +12,7 @@ class App extends Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClear = this.handleClear.bind(this);
   }
 
   handleSubmit(text, voice) {
@@ -27,11 +28,17 @@ class App extends Component {
     });
   }
 
+  handleClear(sound) {
+    const sounds = this.state.sounds.filter(s => s !== sound);
+
+    this.setState({ sounds });
+  }
+
   render() {
     return (
       <section id="app">
         <SoundForm onSubmit={this.handleSubmit} />
-        <SoundsList sounds={this.state.sounds} />
+        <SoundsList sounds={this.state.sounds} onClear={this.handleClear} />
       </section>
     );
   }

@@ -1,0 +1,28 @@
+.overlay {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.overlay__title {
+  color: #E80000;
+  font-size: 1.75rem;
+  margin: 0 0 0.25rem;
+}
+
+.overlay__action {
+  color: #008B8B;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.overlay__action:last-child {
+  margin-right: 0;
+}
