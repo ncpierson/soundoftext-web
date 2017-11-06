@@ -1,5 +1,6 @@
 .donate {
   margin-top: 2rem;
+  position: relative;
 }
 
 .amounts {
@@ -45,6 +46,18 @@
 .amount--custom input:focus {
   border: 1px solid #FFF;
   outline: #008B8B auto 5px;
+}
+
+.message {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+.message.message--error {
+  font-weight: normal;
+  color: #E80000;
 }
 
 @media (min-width: 600px) {

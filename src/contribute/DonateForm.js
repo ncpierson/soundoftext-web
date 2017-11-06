@@ -6,7 +6,9 @@ class DonateForm extends Component {
     super();
 
     this.state = {
-      amount: 5
+      amount: 5,
+      error: false,
+      hasDonated: false
     };
 
     this.handleToken = this.handleToken.bind(this);
@@ -36,8 +38,10 @@ class DonateForm extends Component {
         return response.json();
       })
       .then(json => {
-        // TODO error handling?
-        // TODO show success?
+        this.setState({ hasDonated: true });
+      })
+      .catch(error => {
+        this.setState({ error: true });
       });
   }
 
@@ -78,6 +82,18 @@ class DonateForm extends Component {
             </button>
           </form>
         </div>
+        {this.state.hasDonated && (
+          <div className="overlay">
+            <p className="message">Thanks for your donation!</p>
+          </div>
+        )}
+        {this.state.error && (
+          <div className="overlay">
+            <p className="message message--error">
+              Oops! Something went wrong.
+            </p>
+          </div>
+        )}
       </div>
     );
   }
