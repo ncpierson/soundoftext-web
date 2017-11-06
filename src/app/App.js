@@ -16,14 +16,12 @@ class App extends Component {
   }
 
   handleSubmit(text, voice) {
-    const sound = {
-      voice: voice,
-      text: text
-    };
+    const texts = text.split('\n').reverse();
+    const sounds = texts.map(text => ({ text, voice }));
 
     this.setState(prevState => {
       return {
-        sounds: [sound].concat(prevState.sounds)
+        sounds: sounds.concat(prevState.sounds)
       };
     });
   }
