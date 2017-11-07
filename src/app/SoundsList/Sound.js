@@ -50,7 +50,7 @@ class Sound extends Component {
   }
 
   render() {
-    const { text, voiceKey } = this.props.sound;
+    const { text, voice: voiceKey } = this.props.sound;
 
     const voice = lookupVoice(voiceKey);
 
