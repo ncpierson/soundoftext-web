@@ -16,7 +16,10 @@ class App extends Component {
   }
 
   handleSubmit(text, voice) {
-    const texts = text.split('\n').reverse();
+    const texts = text
+      .split('\n')
+      .reverse()
+      .filter(s => s);
     const sounds = texts.map(text => ({ text, voice }));
 
     this.setState(prevState => {
