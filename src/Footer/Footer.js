@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 import './Footer.css';
 import iconTwitter from './icon-twitter.svg';
 import iconEmail from './icon-email.svg';
@@ -8,14 +9,16 @@ function Footer(props) {
     <footer className="footer">
       <div className="footer__left">
         <a className="footer__link" href="http://twitter.com/NickOnTheWeb">
-          <img className="icon" src={iconTwitter} alt="twitter logo" />
+          Twitter
         </a>
         <a className="footer__link" href="mailto:nick@nickpierson.me">
-          <img className="icon" src={iconEmail} alt="email icon" />
+          Email
         </a>
       </div>
       <div className="footer__right">
-        <span>Made by</span> <a href="http://nickpierson.me">Nick Pierson</a>
+        <Link className="footer__link" to="/docs#index">
+          API
+        </Link>
       </div>
     </footer>
   );

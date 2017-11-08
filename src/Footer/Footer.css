@@ -1,15 +1,17 @@
 .footer {
-  background: white;
+  border-top: 1px solid hsl(180, 90%, 27%);
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
-  box-shadow:
-    0 2px 2px 0 rgba(0,0,0,.14),
-    0 3px 1px -2px rgba(0,0,0,.2),
-    0 1px 5px 0 rgba(0,0,0,.12);
+  margin: 0 1rem;
+  padding: 1rem 0;
+}
+
+.footer a {
+  color: hsl(180, 100%, 90%);
 }
 
 .footer__link {
+  font-size: 0.75rem;
   margin-right: 1rem;
   vertical-align: middle;
 }
@@ -18,21 +20,18 @@
   margin-right: 0;
 }
 
-.icon {
-  height: 1rem;
-}
-
 @media (min-width: 600px) {
   .footer {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding: 2rem 0;
   }
 }
 
 @media (min-width: 960px) {
   .footer {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
     max-width: 800px;
     margin: 0 auto;
   }
