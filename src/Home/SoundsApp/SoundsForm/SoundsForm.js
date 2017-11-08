@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { HotKeys } from 'react-hotkeys';
 import VoiceOptions from './VoiceOptions';
-import './SoundForm.css';
+import './SoundsForm.css';
 
-class SoundForm extends Component {
+class SoundsForm extends Component {
   constructor() {
     super();
 
@@ -83,4 +83,4 @@ class SoundForm extends Component {
   }
 }
 
-export default SoundForm;
+export default SoundsForm;

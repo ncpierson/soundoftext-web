@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { donationsApi, stripeKey } from '../config';
+import { donationsApi, stripeKey } from '../../config';
 
 class DonateForm extends Component {
   constructor() {

@@ -1,11 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactGA from 'react-ga';
-import './index.css';
-import Home from './home/Home';
+import { BrowserRouter } from 'react-router-dom';
+
+import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<Home />, document.getElementById('root'));
+import './index.css';
+
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById('root')
+);
+
 registerServiceWorker();
 
 // Google Analytics
