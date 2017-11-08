@@ -1,8 +1,6 @@
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import './Footer.css';
-import iconTwitter from './icon-twitter.svg';
-import iconEmail from './icon-email.svg';
 
 function Footer(props) {
   return (

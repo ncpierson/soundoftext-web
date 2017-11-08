@@ -1,6 +1,6 @@
 import React from 'react';
 import './Social.css';
-import iconTwitter from '../../Footer/icon-twitter.svg';
+import iconTwitter from './icon-twitter.svg';
 
 const Social = () => {
   return (
