@@ -1,26 +1,29 @@
 import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 import './Header.css';
 
 function Header(props) {
   return (
     <header>
-      <h1 className="brand">Sound of Text</h1>
+      <Link to="/">
+        <h1 className="brand">Sound of Text</h1>
+      </Link>
       <nav className="nav">
         <ul className="nav__list">
           <li className="nav__item">
-            <a className="nav__link" href="#about">
+            <Link to="/#about" className="nav__link">
               About
-            </a>
+            </Link>
           </li>
           <li className="nav__item">
-            <a className="nav__link" href="#contribute">
+            <Link to="/#contribute" className="nav__link">
               Contribute
-            </a>
+            </Link>
           </li>
           <li className="nav__item">
-            <a className="nav__link" href="#learn">
+            <Link to="/#learn" className="nav__link">
               Learn
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
