@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { solarizedLight } from 'react-syntax-highlighter/dist/styles';
+import ReactGA from 'react-ga';
 
 import config from '../config.js';
 
@@ -39,6 +40,15 @@ const GET_SOUNDS_RES_ERROR = `{
 }`;
 
 class Docs extends Component {
+  constructor() {
+    super();
+
+    if (process.env.REACT_APP_ENV === 'production') {
+      ReactGA.initialize('UA-101624095-2');
+      ReactGA.pageview('/docs');
+    }
+  }
+
   render() {
     return (
       <main>
