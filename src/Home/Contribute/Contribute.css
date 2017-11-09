@@ -9,14 +9,15 @@
 }
 
 .amount {
-  width: 33.333%;
-  min-width: 45px;
-  min-height: 45px;
-  font-size: 1em;
   background: none;
   border: none;
   color: #008B8B;
+  cursor: pointer;
+  font-size: 1em;
+  min-height: 45px;
+  min-width: 45px;
   outline: none;
+  width: 33.333%;
 }
 
 .amount.amount--custom {
