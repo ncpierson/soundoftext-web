@@ -1,4 +1,6 @@
 import React from 'react';
+import { OutboundLink } from 'react-ga';
+
 import './Social.css';
 import iconTwitter from './icon-twitter.svg';
 
@@ -16,12 +18,13 @@ const Social = () => {
               src={iconTwitter}
               alt="twitter logo"
             />
-            <a
+            <OutboundLink
+              eventLabel="twitter"
+              to="https://twitter.com/NickOnTheWeb"
               className="twitter__username"
-              href="http://twitter.com/NickOnTheWeb"
             >
               @NickOnTheWeb
-            </a>
+            </OutboundLink>
           </div>
         </div>
       </div>
