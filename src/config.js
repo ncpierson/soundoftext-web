@@ -2,13 +2,13 @@ const env = process.env.REACT_APP_ENV || 'development';
 
 const config = {
   production: {
-    donationsApi: 'http://production.soundoftext.com/api',
-    soundsApi: 'http://production.soundoftext.com/api',
+    donationsApi: 'https://production.soundoftext.com/api',
+    soundsApi: 'https://production.soundoftext.com/api',
     stripeKey: 'pk_live_URckThi75hi6SJSNus2TEGQp'
   },
   staging: {
-    donationsApi: 'http://staging.soundoftext.com/api',
-    soundsApi: 'http://staging.soundoftext.com/api',
+    donationsApi: 'https://staging.soundoftext.com/api',
+    soundsApi: 'https://staging.soundoftext.com/api',
     stripeKey: 'pk_live_URckThi75hi6SJSNus2TEGQp'
   },
   development: {
