@@ -29,6 +29,7 @@ textarea.field__textarea {
 }
 
 textarea.field__textarea:focus, select.field__select:focus {
+  box-shadow: none; /* FF Fix */
   border: 1px solid #FFF;
   outline: hsla(180, 100%, 27%, 0.5) solid 2px;
 }
