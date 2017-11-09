@@ -74,6 +74,7 @@ class SoundsForm extends Component {
                 className="field__submit button"
                 type="submit"
                 ref={el => (this.submitButton = el)}
+                value="Submit"
               />
             </div>
           </form>
