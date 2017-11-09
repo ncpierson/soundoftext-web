@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import './polyfills';
 
 import './index.css';
 
