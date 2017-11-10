@@ -1,0 +1,35 @@
+ul.supporters {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+}
+
+li.supporter {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.supporter:last-child {
+  margin-bottom: 0;
+}
+
+.supporter__image {
+  border-radius: 50%;
+  margin-right: 1rem;
+  width: 3rem;
+}
+
+.supporter__text {
+  width: 100%;
+}
+
+.supporter__name {
+  display: block;
+  font-weight: 600;
+}
+
+.supporter__ad {
+  display: block;
+}

@@ -4,6 +4,7 @@ import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import Home from './Home/Home';
 import Docs from './Docs/Docs';
+import Supporters from './Supporters/Supporters';
 
 import './styles/Button.css';
 import './styles/Card.css';
@@ -19,6 +20,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/docs" component={Docs} />
+          <Route exact path="/supporters" component={Supporters} />
         </Switch>
         <Footer />
       </div>
