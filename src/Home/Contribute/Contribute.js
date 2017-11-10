@@ -1,5 +1,6 @@
 import React from 'react';
 import { OutboundLink } from 'react-ga';
+import { Link } from 'react-router-dom';
 import DonateForm from './DonateForm';
 import './Contribute.css';
 
@@ -23,13 +24,20 @@ function Contribute(props) {
       </div>
       <div className="section section--colored">
         <div className="grid">
-          <OutboundLink
-            eventLabel="patreon"
-            to="https://www.patreon.com/nickpierson"
-            className="grid__item grid__item--solo button button--white"
-          >
-            Become a Patron
-          </OutboundLink>
+          <div className="grid__item grid__item--thin">
+            <OutboundLink
+              eventLabel="patreon"
+              to="https://www.patreon.com/nickpierson"
+              className="button button--white"
+            >
+              Become a Patron
+            </OutboundLink>
+          </div>
+          <div className="grid__item grid__item--thin">
+            <Link to="/supporters" className="button button--link">
+              The Patrons
+            </Link>
+          </div>
         </div>
       </div>
       <div className="section">

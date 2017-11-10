@@ -6,11 +6,11 @@ import Home from './Home/Home';
 import Docs from './Docs/Docs';
 import Supporters from './Supporters/Supporters';
 
-import './styles/Button.css';
-import './styles/Card.css';
-import './styles/Grid.css';
-import './styles/Overlay.css';
 import './styles/Section.css';
+import './styles/Grid.css';
+import './styles/Card.css';
+import './styles/Button.css';
+import './styles/Overlay.css';
 
 class App extends Component {
   render() {

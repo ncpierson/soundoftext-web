@@ -8,7 +8,7 @@ const Social = () => {
   return (
     <section className="section section--colored" id="about">
       <div className="grid">
-        <div className="card grid__item grid__item--solo">
+        <div className="card grid__item grid__item--thin">
           <span>
             Share your thoughts, appreciation, or feedback with me on Twitter:
           </span>

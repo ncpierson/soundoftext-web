@@ -69,7 +69,7 @@ class DonateForm extends Component {
     return (
       <div className="donate">
         <div className="grid">
-          <form className="grid__item grid__item--solo">
+          <form className="grid__item grid__item--thin">
             <div className="amounts">
               <Amount amount="5" onClick={this.handleAmountChange} />
               <Amount amount="10" onClick={this.handleAmountChange} />

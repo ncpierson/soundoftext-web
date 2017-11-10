@@ -44,7 +44,7 @@ class SoundsForm extends Component {
       <div className="section">
         <div className="grid">
           <form
-            className="grid__item grid__item--solo"
+            className="grid__item grid__item--thin"
             onSubmit={this.handleSubmit}
           >
             <div className="field">

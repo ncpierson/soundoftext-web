@@ -13,10 +13,6 @@
   margin-bottom: 0;
 }
 
-.grid__item--solo {
-  margin-bottom: 0;
-}
-
 @media (min-width: 600px) {
   .grid {
     margin-bottom: -1rem; /* make up for grid item margin bottom */
@@ -31,7 +27,7 @@
     margin-bottom: 1rem;
   }
 
-  .grid__item--solo {
+  .grid__item--thin {
     width: calc(75% - (1rem * 0.25));
   }
 
@@ -59,7 +55,7 @@
     margin-bottom: 1.5rem;
   }
 
-  .grid__item--solo {
+  .grid__item--thin {
     width: calc(50% - (1.5rem * 0.5));
   }
 }
