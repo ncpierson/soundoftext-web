@@ -15,3 +15,22 @@ a {
   text-decoration: none;
   color: #008B8B;
 }
+
+hr {
+  border: none;
+  border-top: 1px solid hsl(180, 90%, 27%);
+  margin: 0 1rem;
+}
+
+@media (min-width: 600px) {
+  hr {
+    margin: 0 1.5rem;
+  }
+}
+
+@media (min-width: 960px) {
+  hr {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+}

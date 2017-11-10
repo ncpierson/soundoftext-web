@@ -24,6 +24,7 @@ class Home extends Component {
         <Social />
         <Contribute />
         <Learn />
+        <hr className="hr" />
       </main>
     );
   }
