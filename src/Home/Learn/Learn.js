@@ -5,8 +5,15 @@ function Learn(props) {
     <section id="learn" className="">
       <div className="section section--bordered">
         <h2 className="section__title">Learning Resources</h2>
-        <p>There are many online resources to help you learn a new language.</p>
-        <p>If you would like to add to this list, please send me an email.</p>
+        <p className="section__text">
+          There are many online resources to help you learn a new language.
+          These are a select few that I personally think are the most useful.
+        </p>
+        <p className="section__text">
+          <strong>If you would like to submit a site</strong>, or advertise your
+          own, please send me an email at{' '}
+          <a href="mailto:contact@soundoftext.com">contact@soundoftext.com</a>.
+        </p>
       </div>
       <div className="section section--colored">
         <div className="grid">
