@@ -10,10 +10,7 @@ class Home extends Component {
   constructor() {
     super();
 
-    if (process.env.REACT_APP_ENV === 'production') {
-      ReactGA.initialize('UA-101624095-2');
-      ReactGA.pageview('/');
-    }
+    ReactGA.pageview('/');
   }
 
   render() {

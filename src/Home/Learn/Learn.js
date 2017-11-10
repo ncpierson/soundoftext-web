@@ -1,4 +1,5 @@
 import React from 'react';
+import { OutboundLink } from 'react-ga';
 
 function Learn(props) {
   return (
@@ -26,9 +27,13 @@ function Learn(props) {
               </p>
             </div>
             <div className="card__actions">
-              <a className="card__action" href="https://duolingo.com">
+              <OutboundLink
+                className="card__action"
+                eventLabel="duolingo"
+                to="https://duolingo.com"
+              >
                 Learn More
-              </a>
+              </OutboundLink>
             </div>
           </div>
           <div className="card grid__item">
@@ -41,9 +46,13 @@ function Learn(props) {
               </p>
             </div>
             <div className="card__actions">
-              <a className="card__action" href="https://memrise.com">
+              <OutboundLink
+                className="card__action"
+                eventLabel="memrise"
+                to="https://memrise.com"
+              >
                 Learn More
-              </a>
+              </OutboundLink>
             </div>
           </div>
           <div className="card grid__item">
@@ -55,9 +64,13 @@ function Learn(props) {
               </p>
             </div>
             <div className="card__actions">
-              <a className="card__action" href="https://apps.ankiweb.net">
+              <OutboundLink
+                className="card__action"
+                eventLabel="anki"
+                to="https://apps.ankiweb.net"
+              >
                 Learn More
-              </a>
+              </OutboundLink>
             </div>
           </div>
         </div>
