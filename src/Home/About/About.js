@@ -1,4 +1,10 @@
 import React from 'react';
+import { OutboundLink } from 'react-ga';
+
+import './About.css';
+import iconTwitter from '../Social/icon-twitter.svg';
+import iconEmail from './icon-email.svg';
+import iconPatreon from './icon-patreon.svg';
 
 const About = () => {
   return (
@@ -19,6 +25,34 @@ const About = () => {
         sound to my flashcards in <a href="http://apps.ankiweb.net">Anki</a>.
         Now, thousands of people use this site for many different purposes.
       </p>
+      <h3 className="section__subtitle">Contact Info</h3>
+      <p className="section__text">
+        Feel free to contact me anytime — about anything.
+      </p>
+      <ul className="contact-details">
+        <li className="contact-detail">
+          <img src={iconTwitter} alt="twitter" />
+          <OutboundLink
+            to="https://twitter.com/NickOnTheWeb"
+            eventLabel="twitter"
+          >
+            @NickOnTheWeb
+          </OutboundLink>
+        </li>
+        <li className="contact-detail">
+          <img src={iconEmail} alt="email" />
+          <a href="mailto:contact@soundoftext.com">contact@soundoftext.com</a>
+        </li>
+        <li className="contact-detail">
+          <img src={iconPatreon} alt="email" className="icon-patreon" />
+          <OutboundLink
+            to="https://patreon.com/nickpierson"
+            eventLabel="patreon"
+          >
+            Nick Pierson
+          </OutboundLink>
+        </li>
+      </ul>
     </section>
   );
 };

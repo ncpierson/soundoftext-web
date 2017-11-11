@@ -1,0 +1,28 @@
+ul.contact-details {
+  list-style: none;
+  margin-top: 1.5rem;
+  padding: 0;
+}
+
+li.contact-detail {
+  margin-bottom: 1rem;
+}
+
+li.contact-detail:last-child {
+  margin-bottom: 0;
+}
+
+.contact-detail img {
+  margin-right: 0.75rem;
+  width: 1rem;
+  vertical-align: middle;
+}
+
+.contact-detail a {
+  vertical-align: middle;
+}
+
+.icon-patreon {
+  background-color: #F96854;
+  padding: 0.25rem;
+}
