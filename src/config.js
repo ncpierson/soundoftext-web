@@ -2,8 +2,8 @@ const env = process.env.REACT_APP_ENV || 'development';
 
 const config = {
   production: {
-    donationsApi: 'https://production.soundoftext.com/api',
-    soundsApi: 'https://production.soundoftext.com/api',
+    donationsApi: 'https://soundoftext.com/api',
+    soundsApi: 'https://soundoftext.com/api',
     stripeKey: 'pk_live_URckThi75hi6SJSNus2TEGQp'
   },
   staging: {
