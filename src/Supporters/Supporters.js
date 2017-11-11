@@ -28,8 +28,9 @@ class Supporters extends Component {
           <h2 className="section__title">
             The Lovely List of Prominent Patrons
           </h2>
+          <p className="section__text">Thanks to all the supporters!</p>
           <p className="section__text">
-            Thanks to all the supporters who have pledged $3 or more via{' '}
+            If you would like to see your name here, donate $3 or more via{' '}
             <OutboundLink
               to="https://patreon.com/nickpierson"
               eventLabel="patreon"
