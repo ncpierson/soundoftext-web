@@ -44,6 +44,22 @@ input.field__submit:focus {
   outline: none;
 }
 
+.welcome {
+  background: hsl(180, 20%, 90%);
+  border-radius: 8px;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+.welcome__dismiss {
+  text-align: center;
+}
+
+.welcome__dismiss a {
+  cursor: pointer;
+}
+
 @media (min-width: 600px) {
   .field {
     margin-bottom: 1.5rem;
