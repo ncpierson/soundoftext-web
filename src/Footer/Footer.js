@@ -9,7 +9,7 @@ function Footer(props) {
         <a className="footer__link" href="http://twitter.com/NickOnTheWeb">
           Twitter
         </a>
-        <a className="footer__link" href="mailto:nick@nickpierson.me">
+        <a className="footer__link" href="mailto:contact@soundoftext.com">
           Email
         </a>
       </div>
