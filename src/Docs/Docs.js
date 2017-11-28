@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { solarizedLight } from 'react-syntax-highlighter/dist/styles';
 import ReactGA from 'react-ga';
+import voices from '../Home/SoundsApp/voices.js';
 
 import config from '../config.js';
 
@@ -182,6 +183,13 @@ const Index = () => {
 };
 
 const VoicesTable = () => {
+  const $voices = voices.map(v => (
+    <tr>
+      <td>{v.key}</td>
+      <td>{v.value}</td>
+    </tr>
+  ));
+
   return (
     <table className="table">
       <thead>
@@ -190,212 +198,7 @@ const VoicesTable = () => {
           <th>Language / Voice</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>af-ZA</td>
-          <td>Afrikaans</td>
-        </tr>
-        <tr>
-          <td>sq </td>
-          <td>Albanian</td>
-        </tr>
-        <tr>
-          <td>ar-AE</td>
-          <td>Arabic</td>
-        </tr>
-        <tr>
-          <td>hy </td>
-          <td>Armenian</td>
-        </tr>
-        <tr>
-          <td>bn </td>
-          <td>Bengali</td>
-        </tr>
-        <tr>
-          <td>bs </td>
-          <td>Bosnian</td>
-        </tr>
-        <tr>
-          <td>ca-ES</td>
-          <td>Catalan</td>
-        </tr>
-        <tr>
-          <td>yue-Hant-HK</td>
-          <td>Chinese, Cantonese (Traditional)</td>
-        </tr>
-        <tr>
-          <td>cmn-Hans-CN</td>
-          <td>Chinese, Mandarin (Simplified)</td>
-        </tr>
-        <tr>
-          <td>hr-HR</td>
-          <td>Croatian</td>
-        </tr>
-        <tr>
-          <td>cs-CZ</td>
-          <td>Czech</td>
-        </tr>
-        <tr>
-          <td>da-DK</td>
-          <td>Danish</td>
-        </tr>
-        <tr>
-          <td>nl-NL</td>
-          <td>Dutch</td>
-        </tr>
-        <tr>
-          <td>en-AU</td>
-          <td>English (Australia)</td>
-        </tr>
-        <tr>
-          <td>en-GB</td>
-          <td>English (United Kingdom)</td>
-        </tr>
-        <tr>
-          <td>en-US</td>
-          <td>English (United States)</td>
-        </tr>
-        <tr>
-          <td>eo </td>
-          <td>Esperanto</td>
-        </tr>
-        <tr>
-          <td>fi-FI</td>
-          <td>Finnish</td>
-        </tr>
-        <tr>
-          <td>fr-FR</td>
-          <td>French</td>
-        </tr>
-        <tr>
-          <td>de-DE</td>
-          <td>German</td>
-        </tr>
-        <tr>
-          <td>el-GR</td>
-          <td>Greek</td>
-        </tr>
-        <tr>
-          <td>hi-IN</td>
-          <td>Hindi</td>
-        </tr>
-        <tr>
-          <td>hu-HU</td>
-          <td>Hungarian</td>
-        </tr>
-        <tr>
-          <td>is-IS</td>
-          <td>Icelandic</td>
-        </tr>
-        <tr>
-          <td>id-ID</td>
-          <td>Indonesian</td>
-        </tr>
-        <tr>
-          <td>it-IT</td>
-          <td>Italian</td>
-        </tr>
-        <tr>
-          <td>ja-JP</td>
-          <td>Japanese (Japan)</td>
-        </tr>
-        <tr>
-          <td>km </td>
-          <td>Khmer</td>
-        </tr>
-        <tr>
-          <td>ko-KR</td>
-          <td>Korean</td>
-        </tr>
-        <tr>
-          <td>la </td>
-          <td>Latin</td>
-        </tr>
-        <tr>
-          <td>lv </td>
-          <td>Latvian</td>
-        </tr>
-        <tr>
-          <td>mk </td>
-          <td>Macedonian</td>
-        </tr>
-        <tr>
-          <td>ne </td>
-          <td>Nepali</td>
-        </tr>
-        <tr>
-          <td>nb-NO</td>
-          <td>Norwegian</td>
-        </tr>
-        <tr>
-          <td>pl-PL</td>
-          <td>Polish</td>
-        </tr>
-        <tr>
-          <td>pt-BR</td>
-          <td>Portuguese</td>
-        </tr>
-        <tr>
-          <td>ro-RO</td>
-          <td>Romanian</td>
-        </tr>
-        <tr>
-          <td>ru-RU</td>
-          <td>Russian</td>
-        </tr>
-        <tr>
-          <td>sr-RS</td>
-          <td>Serbian</td>
-        </tr>
-        <tr>
-          <td>si </td>
-          <td>Sinhala</td>
-        </tr>
-        <tr>
-          <td>sk-SK</td>
-          <td>Slovak</td>
-        </tr>
-        <tr>
-          <td>es-MX</td>
-          <td>Spanish (Mexico)</td>
-        </tr>
-        <tr>
-          <td>es-ES</td>
-          <td>Spanish (Spain)</td>
-        </tr>
-        <tr>
-          <td>sw </td>
-          <td>Swahili</td>
-        </tr>
-        <tr>
-          <td>sv-SE</td>
-          <td>Swedish</td>
-        </tr>
-        <tr>
-          <td>ta </td>
-          <td>Tamil</td>
-        </tr>
-        <tr>
-          <td>th-TH</td>
-          <td>Thai</td>
-        </tr>
-        <tr>
-          <td>tr-TR</td>
-          <td>Turkish</td>
-        </tr>
-        <tr>
-          <td>uk-UA</td>
-          <td>Ukrainian</td>
-        </tr>
-        <tr>
-          <td>vi-VN</td>
-          <td>Vietnamese</td>
-        </tr>
-        <tr>
-          <td>cy </td>
-          <td>Welsh</td>
-        </tr>
-      </tbody>
+      <tbody>{$voices}</tbody>
     </table>
   );
 };
