@@ -25,6 +25,6 @@
   },
   "devDependencies": {
     "husky": "^0.14.3",
-    "prettier": "1.7.4"
+    "prettier": "^1.10.2"
   }
 }

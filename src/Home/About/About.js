@@ -16,9 +16,7 @@ const About = () => {
         <a href="https://en.wikipedia.org/wiki/Speech_synthesis">
           text to speech
         </a>{' '}
-        engine from <a href={'http://translate.google.com'}>
-          Google Translate
-        </a>.
+        engine from <a href={'http://translate.google.com'}>Google Translate</a>.
       </p>
       <p className="section__text">
         Originally, Sound of Text was just for myself so that I could attach

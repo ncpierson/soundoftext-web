@@ -57,9 +57,7 @@ function Contribute(props) {
           If you would like to see this site in a different language, please
           help me out by submitting your translations to me. I would love to see
           this site be translated into every language. Just send an email to{' '}
-          <a href="mailto:contact@soundoftext.com">
-            contact@soundoftext.com
-          </a>{' '}
+          <a href="mailto:contact@soundoftext.com">contact@soundoftext.com</a>{' '}
           and say that you want to help translate the site.
         </p>
       </div>
