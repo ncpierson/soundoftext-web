@@ -78,6 +78,11 @@ const patrons = [
     name: 'Hayes Wade',
     image:
       'https://c10.patreonusercontent.com/3/eyJ3Ijo0MDB9/patreon-user/89kWI6YCHwthd5tbNnqDO5fF6TzfERsCJwS7M9SzFzPhjA2YKrbnytgzRarTLMvX.jpeg?token-time=2145916800&token-hash=poNfWFrdIv5cmLQtn_ak4kh59XI9JvUIDpJuuPbgStQ%3D'
+  },
+  {
+    name: 'Piotr Szymczak',
+    image:
+      'https://c10.patreonusercontent.com/3/eyJwIjoxLCJ2IjoiMSJ9/patreon-media/user/7326036/e725daf0e38a4892a91127c0da5c31cc?token-time=2145916800&token-hash=344o5qkv3W9cx7dg-z7fFI1_mb6L-r2ZS3I9DL7dzjQ%3D'
   }
 ];
 
