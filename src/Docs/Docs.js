@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { solarizedLight } from 'react-syntax-highlighter/dist/styles';
 import ReactGA from 'react-ga';
-import voices from '../Home/SoundsApp/voices.js';
+import languages from 'google-tts-languages';
 
 import config from '../config.js';
 
@@ -183,10 +183,10 @@ const Index = () => {
 };
 
 const VoicesTable = () => {
-  const $voices = voices.map(v => (
+  const $voices = languages.map(l => (
     <tr>
-      <td>{v.key}</td>
-      <td>{v.value}</td>
+      <td>{l.code}</td>
+      <td>{l.name}</td>
     </tr>
   ));
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import voices from '../voices';
+import languages from 'google-tts-languages';
 
 class VoiceOptions extends Component {
   constructor() {
@@ -15,10 +15,10 @@ class VoiceOptions extends Component {
   render() {
     const voice = this.props.voice;
 
-    const voiceElems = voices.map(voice => {
+    const voiceElems = languages.map(language => {
       return (
-        <option key={voice.key} value={voice.key}>
-          {voice.value}
+        <option key={language.code} value={language.code}>
+          {language.name}
         </option>
       );
     });

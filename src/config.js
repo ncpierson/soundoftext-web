@@ -8,7 +8,7 @@ const config = {
   },
   development: {
     donationsApi: 'http://localhost:9000',
-    soundsApi: 'http://localhost:9000',
+    soundsApi: 'http://nick.exposed:9000',
     stripeKey: 'pk_test_8qABw2drK8NX6pFmbzQG399U'
   }
 };

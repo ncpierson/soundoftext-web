@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Spinner from 'react-spinkit';
-import { lookupVoice } from '../voices';
+import languages from 'google-tts-languages';
 import { soundsApi } from '../../../config';
 
 class Sound extends Component {
@@ -52,7 +52,7 @@ class Sound extends Component {
   render() {
     const { text, voice: voiceKey } = this.props.sound;
 
-    const voice = lookupVoice(voiceKey);
+    const voice = languages.findByCode(voiceKey).name;
 
     return (
       <div className="card grid__item sound">
