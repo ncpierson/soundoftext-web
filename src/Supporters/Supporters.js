@@ -75,12 +75,12 @@ const patrons = [
     image: 'https://c8.patreon.com/2/400/753535'
   },
   {
-    name: 'Masaaki Hagino',
-    image: 'https://c8.patreon.com/2/200/12606563'
+    name: 'Heather DAugustine',
+    image: 'https://c8.patreon.com/2/200/13134581'
   },
   {
-    name: 'Tran Kathy Nguyen',
-    image: 'https://c8.patreon.com/2/400/11815921'
+    name: 'Masaaki Hagino',
+    image: 'https://c8.patreon.com/2/200/12606563'
   }
 ];
 
