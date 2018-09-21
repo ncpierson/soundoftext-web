@@ -7,8 +7,8 @@ const config = {
     stripeKey: 'pk_live_URckThi75hi6SJSNus2TEGQp'
   },
   development: {
-    donationsApi: 'http://localhost:9000',
-    soundsApi: 'http://nick.exposed:9000',
+    donationsApi: 'http://dev.nick.exposed:9000',
+    soundsApi: 'http://dev.nick.exposed:9000',
     stripeKey: 'pk_test_8qABw2drK8NX6pFmbzQG399U'
   }
 };
