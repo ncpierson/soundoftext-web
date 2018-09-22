@@ -2717,9 +2717,9 @@ globby@^6.1.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
-google-tts-languages@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/google-tts-languages/-/google-tts-languages-0.0.2.tgz#4691b7add84ebac34d2ac4c731d4e914adc33621"
+google-tts-languages@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/google-tts-languages/-/google-tts-languages-0.1.0.tgz#a2468a7eab438fd5ba6ec198a97f97a554006b06"
 
 got@^5.0.0:
   version "5.7.1"
