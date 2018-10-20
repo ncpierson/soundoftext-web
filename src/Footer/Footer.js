@@ -6,8 +6,14 @@ function Footer(props) {
   return (
     <footer className="footer">
       <div className="footer__left">
-        <a className="footer__link" href="http://twitter.com/NickOnTheWeb">
+        <a className="footer__link" href="https://twitter.com/NickOnTheWeb">
           Twitter
+        </a>
+        <a
+          className="footer__link"
+          href="https://github.com/ncpierson/soundoftext-web"
+        >
+          Github
         </a>
         <a className="footer__link" href="mailto:contact@soundoftext.com">
           Email
