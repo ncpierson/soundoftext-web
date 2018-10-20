@@ -1,17 +1,5 @@
-#!/bin/bash
+#! /bin/bash
 
-source ~/.nvm/nvm.sh
+scp scripts/production.sh nick@soundoftext.com:~/Deployment/soundoftext-web.sh
 
-cd ~/Deployment/
-
-rm -rf soundoftext
-
-git clone git@gitlab.com:2pool/soundoftext.git
-
-cd soundoftext
-
-yarn
-
-REACT_APP_ENV=production yarn build
-
-cp -R build/* /var/www/soundoftext.com
+ssh nick@soundoftext.com "/bin/bash ~/Deployment/soundoftext-web.sh"
