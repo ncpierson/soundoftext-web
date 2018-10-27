@@ -1,16 +1,9 @@
-const env = process.env.NODE_ENV || 'development';
+const env = process.env;
 
 const config = {
-  production: {
-    donationsApi: 'https://api.soundoftext.com',
-    soundsApi: 'https://api.soundoftext.com',
-    stripeKey: 'pk_live_URckThi75hi6SJSNus2TEGQp'
-  },
-  development: {
-    donationsApi: 'http://dev.nick.exposed:9000',
-    soundsApi: 'http://dev.nick.exposed:9000',
-    stripeKey: 'pk_test_8qABw2drK8NX6pFmbzQG399U'
-  }
+  donationsApi: env.REACT_APP_DONATIONS_API,
+  soundsApi: env.REACT_APP_SOUNDS_API,
+  stripeKey: env.REACT_APP_STRIPE_KEY
 };
 
-module.exports = config[env];
+module.exports = config;
