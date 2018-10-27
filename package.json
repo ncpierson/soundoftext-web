@@ -1,6 +1,6 @@
 {
   "name": "soundoftext",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "core-js": "^2.5.1",
