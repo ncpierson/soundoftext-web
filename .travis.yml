@@ -1,0 +1,13 @@
+dist: xenial
+sudo: required
+language: node_js
+node_js: lts/*
+cache: yarn
+install: yarn
+script: yarn test
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: ./scripts/travis/deploy.sh
+  on:
+    branch: master

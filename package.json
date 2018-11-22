@@ -21,9 +21,12 @@
   },
   "scripts": {
     "build": "react-scripts build",
+    "deploy": "./scripts/deploy.sh",
     "eject": "react-scripts eject",
+    "postversion": "./scripts/postversion.sh",
     "precommit": "prettier -l \"**/*.js\"",
     "prettier": "prettier --write \"**/*.js\"",
+    "release": "./scripts/release.sh",
     "start": "react-scripts start",
     "test": "react-scripts test --env=jsdom"
   },
