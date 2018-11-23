@@ -13,7 +13,7 @@ function Footer(props) {
           className="footer__link"
           href="https://github.com/ncpierson/soundoftext-web"
         >
-          Github
+          GitHub
         </a>
         <a className="footer__link" href="mailto:contact@soundoftext.com">
           Email
