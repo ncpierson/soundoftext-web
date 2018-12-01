@@ -1,7 +1,42 @@
 import React from 'react';
 import { OutboundLink } from 'react-ga';
 
+const resources = [
+  {
+    description:
+      'Anki allows you to create your own flashcard decks and study how and when you want on any device.',
+    label: 'anki',
+    title: 'Anki',
+    url: 'https://apps.ankiweb.net'
+  },
+  {
+    description:
+      'Duolingo provides guided courses and gamification for learners at any level and supports many popular languages.',
+    label: 'duolingo',
+    title: 'Duolingo',
+    url: 'https://duolingo.com'
+  },
+  {
+    description:
+      'Memrise focuses on learning vocabulary with using flashcard-like decks created by a large community of members. There are courses for over 200 languages.',
+    label: 'memrise',
+    title: 'Memrise',
+    url: 'https://memrise.com'
+  },
+  {
+    description:
+      'Tofukimchi is a free language learning website with free workbooks, resources, and courses on a variety of topics across several languages.',
+    label: 'tofukimchi',
+    title: 'Tofukimchi',
+    url: 'https://tofukimchi.xyz'
+  }
+];
+
 function Learn(props) {
+  const $cards = resources.map(resource => (
+    <Card key={resource.label} {...resource} />
+  ));
+
   return (
     <section id="learn" className="">
       <div className="section section--bordered">
@@ -17,66 +52,24 @@ function Learn(props) {
         </p>
       </div>
       <div className="section section--colored">
-        <div className="grid">
-          <div className="card grid__item">
-            <div className="card__content">
-              <h3 className="card__title">Duolingo</h3>
-              <p>
-                Duolingo provides guided courses and gamification for learners
-                at any level and supports many popular languages.
-              </p>
-            </div>
-            <div className="card__actions">
-              <OutboundLink
-                className="card__action"
-                eventLabel="duolingo"
-                to="https://duolingo.com"
-              >
-                Learn More
-              </OutboundLink>
-            </div>
-          </div>
-          <div className="card grid__item">
-            <div className="card__content">
-              <h3 className="card__title">Memrise</h3>
-              <p>
-                Memrise focuses on learning vocabulary with using flashcard-like
-                decks created by a large community of members. There are courses
-                for over 200 languages.
-              </p>
-            </div>
-            <div className="card__actions">
-              <OutboundLink
-                className="card__action"
-                eventLabel="memrise"
-                to="https://memrise.com"
-              >
-                Learn More
-              </OutboundLink>
-            </div>
-          </div>
-          <div className="card grid__item">
-            <div className="card__content">
-              <h3 className="card__title">Anki</h3>
-              <p>
-                Anki allows you to create your own flashcard decks and study how
-                and when you want on any device.
-              </p>
-            </div>
-            <div className="card__actions">
-              <OutboundLink
-                className="card__action"
-                eventLabel="anki"
-                to="https://apps.ankiweb.net"
-              >
-                Learn More
-              </OutboundLink>
-            </div>
-          </div>
-        </div>
+        <div className="grid">{$cards}</div>
       </div>
     </section>
   );
 }
+
+const Card = ({ description, label, title, url }) => (
+  <div className="card grid__item">
+    <div className="card__content">
+      <h3 className="card__title">{title}</h3>
+      <p>{description}</p>
+    </div>
+    <div className="card__actions">
+      <OutboundLink className="card__action" eventLabel={label} to={url}>
+        Learn More
+      </OutboundLink>
+    </div>
+  </div>
+);
 
 export default Learn;
