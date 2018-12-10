@@ -73,6 +73,20 @@ class Docs extends Component {
             details.
           </p>
         </section>
+        <section id="libraries" className="section section--island">
+          <h2 className="section__title">Client Libraries</h2>
+          <p className="section__text">
+            You might find it useful to use a library that already handles some
+            of the implementation details for the Sound of Text API.
+            Unfortunately, I have only written one so far. If you write one
+            yourself, please let me know so that I can add it to the list!
+          </p>
+          <ul className="section__text">
+            <li>
+              <a href="https://github.com/ncpierson/soundoftext-js">NodeJS</a>
+            </li>
+          </ul>
+        </section>
         <section id="voices" className="section section--island">
           <h2 className="section__title">Supported Voices</h2>
           <p className="section__text">
@@ -163,6 +177,9 @@ const Index = () => {
     <ul className="index">
       <li>
         <a href="#intro">Introduction</a>
+      </li>
+      <li>
+        <a href="#libraries">Client Libraries</a>
       </li>
       <li>
         <a href="#voices">Supported Voices</a>
