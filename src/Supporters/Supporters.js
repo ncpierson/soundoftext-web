@@ -71,16 +71,12 @@ class Supporter extends Component {
 
 const patrons = [
   {
-    name: 'Darasimi Makinde',
-    image: 'https://c8.patreon.com/2/400/753535'
-  },
-  {
-    name: 'Heather DAugustine',
-    image: 'https://c8.patreon.com/2/200/13134581'
-  },
-  {
     name: 'Masaaki Hagino',
     image: 'https://c8.patreon.com/2/200/12606563'
+  },
+  {
+    name: 'Penguin Spheniscidae',
+    image: 'https://c8.patreon.com/2/200/15942084'
   }
 ];
 
