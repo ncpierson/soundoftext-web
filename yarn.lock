@@ -3253,10 +3253,10 @@ globby@^6.1.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
-google-tts-languages@0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/google-tts-languages/-/google-tts-languages-0.1.1.tgz#4e83ca219d0fe44ddd3ec5358f53d818a4dc94cc"
-  integrity sha512-qfwH/+yzRPDDqZ0grsR7H/WmQ1b0ATXaQvp4HIGh3of/uQWh+1ZHgObrkS1kR3oXgzR4ZvT2NXKtzWZYSkQnlw==
+google-tts-languages@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/google-tts-languages/-/google-tts-languages-1.0.0.tgz#c3fa268288eb397d14152be0b007c4f34b400eec"
+  integrity sha512-FGCqxmSeesTa3crS/4VnTdVNy1aM+IV5HHPhsbbQAzhWfzWSXbOSVJ29TMsYz1Oztoij9o8nZB+sm08u6vNqrg==
 
 got@^5.0.0:
   version "5.7.1"
