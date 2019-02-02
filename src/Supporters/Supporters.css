@@ -17,6 +17,7 @@ li.supporter {
 
 .supporter__image {
   border-radius: 50%;
+  display: block;
   height: 3rem;
   margin-right: 1rem;
   width: 3rem;
