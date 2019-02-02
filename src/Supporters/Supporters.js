@@ -71,6 +71,15 @@ class Supporter extends Component {
 
 const patrons = [
   {
+    name: 'Darasimi Makinde',
+    image: 'https://c8.patreon.com/2/200/753535'
+  },
+  {
+    name: 'Edward Kylle Aquias',
+    image:
+      'https://c10.patreonusercontent.com/3/eyJ3IjoyMDB9/patreon-media/p/user/16155036/88df8e1b682149d9948698a30c4bf93e/1?token-time=2145916800&token-hash=S7uQZ4XkqSOL8utxt5Cdf1qTi0ANZrl-0TIbOpOyWJM%3D'
+  },
+  {
     name: 'Masaaki Hagino',
     image: 'https://c8.patreon.com/2/200/12606563'
   },
