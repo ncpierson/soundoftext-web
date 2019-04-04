@@ -77,13 +77,21 @@ class Docs extends Component {
           <h2 className="section__title">Client Libraries</h2>
           <p className="section__text">
             You might find it useful to use a library that already handles some
-            of the implementation details for the Sound of Text API.
-            Unfortunately, I have only written one so far. If you write one
-            yourself, please let me know so that I can add it to the list!
+            of the implementation details for the Sound of Text API. If you
+            write one yourself, please let me know so that I can add it to the
+            list!
           </p>
           <ul className="section__text">
             <li>
               <a href="https://github.com/ncpierson/soundoftext-js">NodeJS</a>
+            </li>
+            <li>
+              <a href="https://github.com/berk76/soundoftext-java">Java (1)</a>
+            </li>
+            <li>
+              <a href="https://github.com/srwaggon/soundoftext-java">
+                Java (2)
+              </a>
             </li>
           </ul>
         </section>
@@ -172,32 +180,30 @@ class Docs extends Component {
   }
 }
 
-const Index = () => {
-  return (
-    <ul className="index">
-      <li>
-        <a href="#intro">Introduction</a>
-      </li>
-      <li>
-        <a href="#libraries">Client Libraries</a>
-      </li>
-      <li>
-        <a href="#voices">Supported Voices</a>
-      </li>
-      <li>
-        <a href="#reference">Reference</a>
-        <ul>
-          <li>
-            <a href="#reference">POST /sounds</a>
-          </li>
-          <li>
-            <a href="#show-sound">GET /sounds/:id</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  );
-};
+const Index = () => (
+  <ul className="index">
+    <li>
+      <a href="#intro">Introduction</a>
+    </li>
+    <li>
+      <a href="#libraries">Client Libraries</a>
+    </li>
+    <li>
+      <a href="#voices">Supported Voices</a>
+    </li>
+    <li>
+      <a href="#reference">Reference</a>
+      <ul>
+        <li>
+          <a href="#reference">POST /sounds</a>
+        </li>
+        <li>
+          <a href="#show-sound">GET /sounds/:id</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+);
 
 const VoicesTable = () => {
   const $voices = languages.map(l => (
