@@ -25,10 +25,10 @@ const resources = [
   },
   {
     description:
-      'Tofukimchi is a free language learning website with free workbooks, resources, and courses on a variety of topics across several languages.',
-    label: 'tofukimchi',
-    title: 'Tofukimchi',
-    url: 'https://tofukimchi.xyz'
+      'Speaking Lab is a free language learning website with free workbooks, resources, and courses on a variety of topics across several languages.',
+    label: 'speakinglab',
+    title: 'Speaking Lab',
+    url: 'https://www.speakinglab.xyz/'
   }
 ];
 
