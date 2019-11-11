@@ -5,6 +5,7 @@ import About from './About/About';
 import Social from './Social/Social';
 import Learn from './Learn/Learn';
 import Contribute from './Contribute/Contribute';
+import Banner from './Banner/Banner';
 
 class Home extends Component {
   constructor() {
@@ -16,6 +17,7 @@ class Home extends Component {
   render() {
     return (
       <main>
+        <Banner />
         <SoundsApp />
         <About />
         <Social />
