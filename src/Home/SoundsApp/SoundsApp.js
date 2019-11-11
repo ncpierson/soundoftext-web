@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import 'whatwg-fetch';
+
 import SoundsForm from './SoundsForm/SoundsForm.js';
 import SoundsList from './SoundsList/SoundsList.js';
-import 'whatwg-fetch';
 
 class SoundsApp extends Component {
   constructor() {
