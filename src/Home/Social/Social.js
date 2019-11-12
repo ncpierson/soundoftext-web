@@ -20,10 +20,10 @@ const Social = () => {
             />
             <OutboundLink
               eventLabel="twitter"
-              to="https://twitter.com/NickOnTheWeb"
+              to="https://twitter.com/SoundOfTextApp"
               className="twitter__username"
             >
-              @NickOnTheWeb
+              @SoundOfTextApp
             </OutboundLink>
           </div>
         </div>

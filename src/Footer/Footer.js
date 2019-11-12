@@ -6,7 +6,7 @@ function Footer(props) {
   return (
     <footer className="footer">
       <div className="footer__left">
-        <a className="footer__link" href="https://twitter.com/NickOnTheWeb">
+        <a className="footer__link" href="https://twitter.com/SoundOfTextApp">
           Twitter
         </a>
         <a
