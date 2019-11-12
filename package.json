@@ -21,7 +21,7 @@
   },
   "scripts": {
     "build": "react-scripts build",
-    "deploy": "./scripts/deploy.sh",
+    "deploy": "./scripts/docker.sh deploy",
     "eject": "react-scripts eject",
     "postversion": "./scripts/postversion.sh",
     "precommit": "prettier -l \"**/*.js\"",
