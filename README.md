@@ -1,8 +1,6 @@
 Sound of Text
 ---
 
-[![Build Status](https://travis-ci.com/ncpierson/soundoftext-web.svg?branch=master)](https://travis-ci.com/ncpierson/soundoftext-web)
-
 [Sound of Text](https://soundoftext.com) is a website built to help language
 learners convert text into audio using Google's TTS Engine.
 
@@ -63,10 +61,6 @@ Explanation:
 - `REACT_APP_STRIPE_KEY`: public stripe key needed to interact with donations
   api
 
-## Continuous Deployment
-
-This application is continuously deployed to Docker Hub using Travis CI.
-[View latest build](https://travis-ci.com/ncpierson/soundoftext-web)
 
 ## Manual Deployment
 
