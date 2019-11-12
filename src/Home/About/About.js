@@ -31,10 +31,10 @@ const About = () => {
         <li className="contact-detail">
           <img src={iconTwitter} alt="twitter" />
           <OutboundLink
-            to="https://twitter.com/NickOnTheWeb"
+            to="https://twitter.com/SoundOfTextApp"
             eventLabel="twitter"
           >
-            @NickOnTheWeb
+            @SoundOfTextApp
           </OutboundLink>
         </li>
         <li className="contact-detail">
