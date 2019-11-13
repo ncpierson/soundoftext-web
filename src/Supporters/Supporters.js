@@ -36,7 +36,8 @@ class Supporters extends Component {
               eventLabel="patreon"
             >
               Patreon
-            </OutboundLink>.
+            </OutboundLink>
+            .
           </p>
           <ul className="supporters">{$supporters}</ul>
         </section>
