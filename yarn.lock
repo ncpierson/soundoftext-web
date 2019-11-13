@@ -3256,9 +3256,9 @@ globby@^6.1.0:
     pinkie-promise "^2.0.0"
 
 google-tts-languages@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/google-tts-languages/-/google-tts-languages-1.0.0.tgz#c3fa268288eb397d14152be0b007c4f34b400eec"
-  integrity sha512-FGCqxmSeesTa3crS/4VnTdVNy1aM+IV5HHPhsbbQAzhWfzWSXbOSVJ29TMsYz1Oztoij9o8nZB+sm08u6vNqrg==
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/google-tts-languages/-/google-tts-languages-1.0.1.tgz#345980e65184d29675dfe578519460f6f0917351"
+  integrity sha512-81rED4RHn0KW70F/N8fWLPgCy+kqCrH2N5hFQhpjfqpIkdCc8k7aWP5SfWo/5sGfTWLsik9ybyy/tx3lxoULEA==
 
 got@^5.0.0:
   version "5.7.1"
