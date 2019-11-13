@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo $npm_package_version > VERSION
+echo $npm_package_version > .version
 
-git add VERSION
+git add .version
 
 git commit --amend --no-edit
 

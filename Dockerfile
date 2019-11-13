@@ -16,7 +16,7 @@ RUN yarn build
 FROM nginx
 
 COPY --from=builder /usr/src/app/build/ /usr/share/nginx/html
-COPY                VERSION             /usr/share/nginx/html
+COPY                .version            /usr/share/nginx/html
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
