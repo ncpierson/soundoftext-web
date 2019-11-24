@@ -59,7 +59,7 @@ class SoundsForm extends Component {
                   className="field__textarea"
                   rows="2"
                   minLength="0"
-                  maxLength="100"
+                  maxLength="200"
                   required
                   autoFocus
                 />
