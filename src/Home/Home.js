@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
-import SoundsApp from './SoundsApp/SoundsApp';
+
 import About from './About/About';
-import Social from './Social/Social';
-import Learn from './Learn/Learn';
+import Banner from './Banner/Banner';
 import Contribute from './Contribute/Contribute';
+import Learn from './Learn/Learn';
+import Social from './Social/Social';
+import SoundsApp from './SoundsApp/SoundsApp';
 
 class Home extends Component {
   constructor() {
@@ -16,6 +18,7 @@ class Home extends Component {
   render() {
     return (
       <main>
+        <Banner />
         <SoundsApp />
         <About />
         <Social />

@@ -61,7 +61,6 @@ class SoundsForm extends Component {
                   minLength="0"
                   maxLength="200"
                   required
-                  autoFocus
                 />
               </HotKeys>
             </div>
