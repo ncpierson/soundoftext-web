@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { OutboundLink } from 'react-ga';
 
-const NAME = 'HEARLING_LAUNCH';
+const NAME = 'HEARLING_PRO';
 
 class Banner extends Component {
   constructor() {
@@ -28,24 +28,29 @@ class Banner extends Component {
         <div className="grid">
           <div className="card grid__item">
             <div className="card__content">
-              <h3 className="card__title">Announcement</h3>
+              <h3 className="card__title">
+                <span>🥳</span> <span> Just Launched: Hearling Pro</span>
+              </h3>
               <p>
-                Sound of Text v2 is here... and it's called Hearling! Hearling
-                has more voice options to choose from: gender, quality, and
-                dialect for example. You can also create clips up to 5,000
-                characters long, as well as save them for later.{' '}
-                <strong>Please check it out</strong> and let me know what you
-                think!
+                Hearling is a website meant to be an improved version of Sound
+                of Text, made by the same creator. Now, the Pro version has been
+                launched!
+              </p>
+              <p>
+                For $5 per month, you get up to 250 thousand characters of
+                high-quality voices. You can also create and download up to 50
+                clips at once. If this sounds interesting to you, please check
+                it out!
               </p>
             </div>
             <div className="card__actions">
               <OutboundLink
                 className="card__action"
-                eventLabel="hearling:launch"
+                eventLabel="hearling:pro"
                 target="_blank"
                 to="https://hearling.com"
               >
-                Check it out
+                Visit Hearling
               </OutboundLink>
               <button className="card__action" onClick={this.handleDismiss}>
                 Dismiss
