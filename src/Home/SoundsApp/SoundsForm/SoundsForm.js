@@ -67,6 +67,7 @@ class SoundsForm extends Component {
             <VoiceOptions
               onChange={this.handleVoiceChange}
               voice={this.state.voice}
+              voices={this.props.voices}
             />
             <div className="field">
               <input

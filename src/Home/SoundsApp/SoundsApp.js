@@ -3,17 +3,25 @@ import 'whatwg-fetch';
 
 import SoundsForm from './SoundsForm/SoundsForm.js';
 import SoundsList from './SoundsList/SoundsList.js';
+import { soundsApi } from '../../config';
 
 class SoundsApp extends Component {
   constructor() {
     super();
 
     this.state = {
-      sounds: []
+      sounds: [],
+      voices: []
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClear = this.handleClear.bind(this);
+  }
+
+  componentDidMount() {
+    fetch(`${soundsApi}/voices`)
+      .then(res => res.json())
+      .then(voices => this.setState({ voices }));
   }
 
   handleSubmit(text, voice) {
@@ -37,10 +45,15 @@ class SoundsApp extends Component {
   }
 
   render() {
+    const { sounds, voices } = this.state;
     return (
       <section id="app">
-        <SoundsForm onSubmit={this.handleSubmit} />
-        <SoundsList sounds={this.state.sounds} onClear={this.handleClear} />
+        <SoundsForm onSubmit={this.handleSubmit} voices={voices} />
+        <SoundsList
+          sounds={sounds}
+          onClear={this.handleClear}
+          voices={voices}
+        />
       </section>
     );
   }

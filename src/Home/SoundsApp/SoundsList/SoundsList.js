@@ -17,7 +17,14 @@ class SoundsList extends Component {
   render() {
     const $sounds = this.props.sounds.map(sound => {
       const key = `${sound.voice}/${sound.text}`;
-      return <Sound key={key} sound={sound} onClear={this.handleClear} />;
+      return (
+        <Sound
+          key={key}
+          sound={sound}
+          onClear={this.handleClear}
+          voices={this.props.voices}
+        />
+      );
     });
 
     const soundsExist = $sounds.length > 0;

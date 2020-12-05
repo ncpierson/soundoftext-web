@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Spinner from 'react-spinkit';
-import languages from 'google-tts-languages';
 import { soundsApi } from '../../../config';
 
 class Sound extends Component {
@@ -50,9 +49,10 @@ class Sound extends Component {
   }
 
   render() {
-    const { text, voice: voiceKey } = this.props.sound;
+    const { sound, voices } = this.props;
+    const { text, voice: voiceKey } = sound;
 
-    const voice = languages.findByCode(voiceKey).name;
+    const voice = voices.find(v => voiceKey === v.code).name;
 
     return (
       <div className="card grid__item sound">

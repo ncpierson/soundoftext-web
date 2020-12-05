@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import languages from 'google-tts-languages';
 
 class VoiceOptions extends Component {
   constructor() {
@@ -13,12 +12,12 @@ class VoiceOptions extends Component {
   }
 
   render() {
-    const voice = this.props.voice;
+    const { voices, voice } = this.props;
 
-    const voiceElems = languages.map(language => {
+    const voiceElems = voices.map(voice => {
       return (
-        <option key={language.code} value={language.code}>
-          {language.name}
+        <option key={voice.code} value={voice.code}>
+          {voice.name}
         </option>
       );
     });
@@ -30,6 +29,7 @@ class VoiceOptions extends Component {
         </label>
         <select
           className="field__select"
+          disabled={voices.length === 0}
           name="voice"
           value={voice}
           onChange={this.onVoiceSelected}

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { solarizedLight } from 'react-syntax-highlighter/dist/styles';
 import ReactGA from 'react-ga';
-import languages from 'google-tts-languages';
 
 import config from '../config.js';
 
@@ -44,7 +43,15 @@ class Docs extends Component {
   constructor() {
     super();
 
+    this.state = { voices: [] };
+
     ReactGA.pageview('/docs');
+  }
+
+  componentDidMount() {
+    fetch(`${config.soundsApi}/voices`)
+      .then(res => res.json())
+      .then(voices => this.setState({ voices }));
   }
 
   render() {
@@ -103,7 +110,7 @@ class Docs extends Component {
             be added (or removed) at any time. Always use the shortened
             voice/language code, never the full name, when using the API.
           </p>
-          <VoicesTable />
+          <VoicesTable voices={this.state.voices} />
         </section>
         <section id="reference">
           <div className="section section--island">
@@ -205,8 +212,8 @@ const Index = () => (
   </ul>
 );
 
-const VoicesTable = () => {
-  const $voices = languages.map(l => (
+const VoicesTable = ({ voices }) => {
+  const $voices = voices.map(l => (
     <tr>
       <td>{l.code}</td>
       <td>{l.name}</td>
@@ -218,7 +225,7 @@ const VoicesTable = () => {
       <thead>
         <tr>
           <th>Code</th>
-          <th>Language / Voice</th>
+          <th>Voice</th>
         </tr>
       </thead>
       <tbody>{$voices}</tbody>
