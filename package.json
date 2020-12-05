@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "core-js": "^2.5.1",
-    "google-translate-tts": "^0.2.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-ga": "^2.2.0",

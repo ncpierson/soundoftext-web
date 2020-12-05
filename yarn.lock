@@ -3374,11 +3374,6 @@ globby@^6.1.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
-google-translate-tts@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/google-translate-tts/-/google-translate-tts-0.2.1.tgz#ef45ac615bba12119037dfa6c107d79dd9fc0b82"
-  integrity sha512-TttKgKYPnmBk3tHsLoJAf/On7NsQ1Gih2Uq7WhCodnQJ4GsEXIoPCaBsvURZZHiZ+iftSZ+d0NCFNJ1ZLqBHZA==
-
 got@^5.0.0:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/got/-/got-5.7.1.tgz#5f81635a61e4a6589f180569ea4e381680a51f35"
