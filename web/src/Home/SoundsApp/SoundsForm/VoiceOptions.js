@@ -14,7 +14,7 @@ class VoiceOptions extends Component {
   render() {
     const { voices, voice } = this.props;
 
-    const voiceElems = voices.map(voice => {
+    const voiceElems = voices.map((voice) => {
       return (
         <option key={voice.code} value={voice.code}>
           {voice.name}

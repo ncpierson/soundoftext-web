@@ -9,7 +9,7 @@ class SoundsForm extends Component {
 
     this.state = {
       text: '',
-      voice: 'en-US'
+      voice: 'en-US',
     };
 
     this.handleTextChange = this.handleTextChange.bind(this);
@@ -33,11 +33,11 @@ class SoundsForm extends Component {
 
   render() {
     const keyMap = {
-      submit: ['ctrl+enter', 'command+enter']
+      submit: ['ctrl+enter', 'command+enter'],
     };
 
     const keyHandlers = {
-      submit: () => this.submitButton.click()
+      submit: () => this.submitButton.click(),
     };
 
     return (
@@ -73,7 +73,7 @@ class SoundsForm extends Component {
               <input
                 className="field__submit button"
                 type="submit"
-                ref={el => (this.submitButton = el)}
+                ref={(el) => (this.submitButton = el)}
                 value="Submit"
               />
             </div>

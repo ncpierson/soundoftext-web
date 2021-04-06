@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class SoundsPlaceholder extends Component {
   state = {
-    needsHelp: false
+    needsHelp: false,
   };
 
   handleHelpClick = () => {

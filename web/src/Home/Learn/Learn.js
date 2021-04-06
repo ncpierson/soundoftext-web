@@ -7,33 +7,33 @@ const resources = [
       'Anki allows you to create your own flashcard decks and study how and when you want on any device.',
     label: 'anki',
     title: 'Anki',
-    url: 'https://apps.ankiweb.net'
+    url: 'https://apps.ankiweb.net',
   },
   {
     description:
       'Duolingo provides guided courses and gamification for learners at any level and supports many popular languages.',
     label: 'duolingo',
     title: 'Duolingo',
-    url: 'https://duolingo.com'
+    url: 'https://duolingo.com',
   },
   {
     description:
       'Memrise focuses on learning vocabulary with using flashcard-like decks created by a large community of members. There are courses for over 200 languages.',
     label: 'memrise',
     title: 'Memrise',
-    url: 'https://memrise.com'
+    url: 'https://memrise.com',
   },
   {
     description:
       'Speaking Lab is a free language learning website with free workbooks, resources, and courses on a variety of topics across several languages.',
     label: 'speakinglab',
     title: 'Speaking Lab',
-    url: 'https://www.speakinglab.xyz/'
-  }
+    url: 'https://www.speakinglab.xyz/',
+  },
 ];
 
 function Learn(props) {
-  const $cards = resources.map(resource => (
+  const $cards = resources.map((resource) => (
     <Card key={resource.label} {...resource} />
   ));
 

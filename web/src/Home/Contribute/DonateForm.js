@@ -8,7 +8,7 @@ class DonateForm extends Component {
     this.state = {
       amount: 5,
       error: false,
-      hasDonated: false
+      hasDonated: false,
     };
 
     this.handleToken = this.handleToken.bind(this);
@@ -19,7 +19,7 @@ class DonateForm extends Component {
       key: stripeKey,
       name: 'Sound of Text',
       locale: 'auto',
-      token: this.handleToken
+      token: this.handleToken,
     });
   }
 
@@ -30,19 +30,19 @@ class DonateForm extends Component {
     const fetchOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ token: tokenId, amount: stripeAmount })
+      body: JSON.stringify({ token: tokenId, amount: stripeAmount }),
     };
 
     fetch(`${donationsApi}/donations`, fetchOptions)
-      .then(response => {
+      .then((response) => {
         return response.json();
       })
-      .then(json => {
+      .then((json) => {
         if (!json.success) throw new Error(json.error.message);
 
         this.setState({ hasDonated: true });
       })
-      .catch(error => {
+      .catch((error) => {
         this.setState({ error: true });
       });
   }
@@ -59,7 +59,7 @@ class DonateForm extends Component {
     this.stripeHandler.open({
       description: 'Donation to keep Sound of Text running',
       panelLabel: 'Donate',
-      amount: stripeAmount
+      amount: stripeAmount,
     });
   }
 

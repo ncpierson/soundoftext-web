@@ -50,8 +50,8 @@ class Docs extends Component {
 
   componentDidMount() {
     fetch(`${config.soundsApi}/voices`)
-      .then(res => res.json())
-      .then(voices => this.setState({ voices }));
+      .then((res) => res.json())
+      .then((voices) => this.setState({ voices }));
   }
 
   render() {
@@ -213,7 +213,7 @@ const Index = () => (
 );
 
 const VoicesTable = ({ voices }) => {
-  const $voices = voices.map(l => (
+  const $voices = voices.map((l) => (
     <tr>
       <td>{l.code}</td>
       <td>{l.name}</td>

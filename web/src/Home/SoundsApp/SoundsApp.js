@@ -11,7 +11,7 @@ class SoundsApp extends Component {
 
     this.state = {
       sounds: [],
-      voices: []
+      voices: [],
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -20,26 +20,26 @@ class SoundsApp extends Component {
 
   componentDidMount() {
     fetch(`${soundsApi}/voices`)
-      .then(res => res.json())
-      .then(voices => this.setState({ voices }));
+      .then((res) => res.json())
+      .then((voices) => this.setState({ voices }));
   }
 
   handleSubmit(text, voice) {
     const texts = text
       .split('\n')
       .reverse()
-      .filter(s => s);
-    const sounds = texts.map(text => ({ text, voice }));
+      .filter((s) => s);
+    const sounds = texts.map((text) => ({ text, voice }));
 
-    this.setState(prevState => {
+    this.setState((prevState) => {
       return {
-        sounds: sounds.concat(prevState.sounds)
+        sounds: sounds.concat(prevState.sounds),
       };
     });
   }
 
   handleClear(sound) {
-    const sounds = this.state.sounds.filter(s => s !== sound);
+    const sounds = this.state.sounds.filter((s) => s !== sound);
 
     this.setState({ sounds });
   }

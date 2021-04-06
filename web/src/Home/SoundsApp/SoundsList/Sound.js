@@ -8,7 +8,7 @@ class Sound extends Component {
 
     this.state = {
       error: false,
-      loading: true
+      loading: true,
     };
 
     this.handlePlay = this.handlePlay.bind(this);
@@ -24,13 +24,13 @@ class Sound extends Component {
     const { text, voice } = this.props.sound;
 
     requestSound(text, voice)
-      .then(soundId => {
+      .then((soundId) => {
         return awaitSound(soundId);
       })
-      .then(location => {
+      .then((location) => {
         this.setState({ loading: false, url: location });
       })
-      .catch(error => {
+      .catch((error) => {
         this.setState({ error: true, loading: false });
       });
   }
@@ -52,7 +52,7 @@ class Sound extends Component {
     const { sound, voices } = this.props;
     const { text, voice: voiceKey } = sound;
 
-    const voice = voices.find(v => voiceKey === v.code).name;
+    const voice = voices.find((v) => voiceKey === v.code).name;
 
     return (
       <div className="card grid__item sound">
@@ -68,7 +68,7 @@ class Sound extends Component {
             Download
           </a>
         </div>
-        <audio src={this.state.url} ref={el => (this.audio = el)} />
+        <audio src={this.state.url} ref={(el) => (this.audio = el)} />
         {this.state.loading && (
           <div className="overlay">
             <Spinner
@@ -100,10 +100,10 @@ async function requestSound(text, voice) {
   const fetchOptions = {
     body: JSON.stringify({
       engine: 'Google',
-      data: { text, voice }
+      data: { text, voice },
     }),
     headers: { 'Content-Type': 'application/json' },
-    method: 'POST'
+    method: 'POST',
   };
 
   const soundResponse = await fetch(`${soundsApi}/sounds`, fetchOptions);
@@ -130,7 +130,7 @@ async function awaitSound(soundId, attempts = 5, delay = 1000) {
 }
 
 function timeout(duration) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(resolve, duration);
   });
 }

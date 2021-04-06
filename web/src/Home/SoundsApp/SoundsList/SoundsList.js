@@ -15,7 +15,7 @@ class SoundsList extends Component {
   }
 
   render() {
-    const $sounds = this.props.sounds.map(sound => {
+    const $sounds = this.props.sounds.map((sound) => {
       const key = `${sound.voice}/${sound.text}`;
       return (
         <Sound
