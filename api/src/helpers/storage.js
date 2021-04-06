@@ -8,7 +8,7 @@ const tts = require('google-tts-api');
 
 aws.config.update({
   accessKeyId: config.storage.accessKeyId,
-  secretAccessKey: config.storage.secretAccessKey
+  secretAccessKey: config.storage.secretAccessKey,
 });
 
 const endpoint = new aws.Endpoint('sfo2.digitaloceanspaces.com');
@@ -27,7 +27,7 @@ const bucket = new aws.S3({
 function createSound(soundRequest) {
   const fileName = `${soundRequest.id}.mp3`;
 
-  lookupSound(soundRequest.id).then(location => {
+  lookupSound(soundRequest.id).then((location) => {
     if (location) {
       return;
     }
@@ -38,14 +38,14 @@ function createSound(soundRequest) {
 
 function create(soundRequest) {
   return download(soundRequest)
-    .then(stream => {
+    .then((stream) => {
       return upload(stream, soundRequest);
     })
     .then(() => {
       soundRequest.set({ status: SoundRequest.DONE });
       return soundRequest.save();
     })
-    .catch(error => {
+    .catch((error) => {
       logger.error(
         `Request could not be fulfilled: {
            text: ${soundRequest.text},
@@ -56,7 +56,7 @@ function create(soundRequest) {
 
       soundRequest.set({
         message: error.message,
-        status: SoundRequest.ERROR
+        status: SoundRequest.ERROR,
       });
 
       soundRequest.save();
@@ -76,23 +76,23 @@ function downloadFile(url) {
 
   const options = {
     headers: {
-      'User-Agent': 'SoundOfTextBot (soundoftext.com)'
+      'User-Agent': 'SoundOfTextBot (soundoftext.com)',
     },
     host: host,
     path: pathname + search,
-    timeout: 10000
+    timeout: 10000,
   };
 
   return new Promise((resolve, reject) => {
     http
-      .get(options, res => {
+      .get(options, (res) => {
         if (res.statusCode >= 300) {
           reject(new Error(`Status Code ${res.statusCode} retrieving ${url}`));
         }
 
         resolve(res);
       })
-      .on('error', error => {
+      .on('error', (error) => {
         reject(error);
       });
   });
@@ -110,7 +110,7 @@ function upload(stream, soundRequest) {
         ACL: 'public-read',
         Body: stream,
         ContentDisposition: contentDisposition,
-        Key: key
+        Key: key,
       },
       (err, data) => {
         if (err) reject(err);
@@ -129,21 +129,21 @@ function lookupSound(soundId) {
   const fileName = `${soundId}.mp3`;
 
   const options = {
-    hostname: 'soundoftext.nyc3.digitaloceanspaces.com',
+    hostname: 'storage.soundoftext.com',
     method: 'HEAD',
-    path: '/' + fileName
+    path: '/' + fileName,
   };
 
   return new Promise((resolve, reject) => {
     http
-      .get(options, res => {
+      .get(options, (res) => {
         if (res.statusCode >= 300) {
           resolve();
         }
 
         resolve(`https://${options.hostname}${options.path}`);
       })
-      .on('error', error => {
+      .on('error', (error) => {
         resolve();
       });
   });
@@ -151,5 +151,5 @@ function lookupSound(soundId) {
 
 module.exports = {
   createSound,
-  lookupSound
+  lookupSound,
 };

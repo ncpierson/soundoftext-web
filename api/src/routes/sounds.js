@@ -5,7 +5,7 @@ const express = require('express'),
   storage = require('../helpers/storage.js'),
   sanitize = require('../helpers/sanitize.js');
 
-router.post('/', function(req, res, next) {
+router.post('/', function (req, res, next) {
   if (!req.body.data) {
     res.locals.errorMessage = "Missing value for 'data'. See documentation.";
     return next();
@@ -26,12 +26,12 @@ router.post('/', function(req, res, next) {
   const safeVoice = sanitize(data.voice);
 
   SoundRequest.findOrCreate({ text: safeText, voice: safeVoice })
-    .then(soundRequest => {
+    .then((soundRequest) => {
       res.json({ success: true, id: soundRequest.id });
 
       storage.createSound(soundRequest);
     })
-    .catch(error => {
+    .catch((error) => {
       console.error(error);
       console.error('Request Body: ' + JSON.stringify(req.body));
 
@@ -40,12 +40,12 @@ router.post('/', function(req, res, next) {
     });
 });
 
-router.get('/:id', function(req, res, next) {
+router.get('/:id', function (req, res, next) {
   lookupSound(req.params.id)
-    .then(response => {
+    .then((response) => {
       res.json(response);
     })
-    .catch(error => {
+    .catch((error) => {
       res.locals.errorMessage = error.message;
       next();
     });

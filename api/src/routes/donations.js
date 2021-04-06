@@ -3,12 +3,12 @@ const express = require('express'),
   config = require('../config/config'),
   stripe = require('stripe')(config.stripe.key);
 
-const toDonation = charge => ({
+const toDonation = (charge) => ({
   created: charge.created,
-  amount: charge.amount / 100
+  amount: charge.amount / 100,
 });
 
-router.post('/', function(req, res) {
+router.post('/', function (req, res) {
   const token = req.body.token;
   const amount = req.body.amount;
 
@@ -17,9 +17,9 @@ router.post('/', function(req, res) {
       amount: amount,
       currency: 'usd',
       source: token,
-      statement_descriptor: 'SOUNDOFTEXT_DONATION'
+      statement_descriptor: 'SOUNDOFTEXT_DONATION',
     },
-    function(err, charge) {
+    function (err, charge) {
       if (err) {
         console.error('Donation Error');
         console.error(err);
