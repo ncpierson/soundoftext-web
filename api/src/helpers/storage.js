@@ -11,11 +11,11 @@ aws.config.update({
   secretAccessKey: config.storage.secretAccessKey
 });
 
-const endpoint = new aws.Endpoint('nyc3.digitaloceanspaces.com');
+const endpoint = new aws.Endpoint('sfo2.digitaloceanspaces.com');
 
 const bucket = new aws.S3({
   endpoint: endpoint,
-  params: { Bucket: 'soundoftext' }
+  params: { Bucket: 'sot' },
 });
 
 /**
