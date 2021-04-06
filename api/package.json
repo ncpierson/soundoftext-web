@@ -1,0 +1,40 @@
+{
+  "name": "soundoftext-api",
+  "version": "1.1.2",
+  "private": true,
+  "scripts": {
+    "build": "./scripts/docker.sh build",
+    "deploy": "./scripts/docker.sh deploy",
+    "postversion": "./scripts/postversion.sh",
+    "precommit": "prettier -l \"**/*.js\"",
+    "prettier": "prettier --write \"**/*.js\"",
+    "release": "./scripts/release.sh",
+    "start": "./scripts/docker.sh up",
+    "stop": "./scripts/docker.sh down",
+    "test": "yarn test:acceptance",
+    "test:acceptance": "./scripts/test.sh"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.145.0",
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~2.6.9",
+    "dotenv": "^6.1.0",
+    "express": "~4.15.5",
+    "google-translate-tts": "0.4.0-dev",
+    "google-tts-api": "^2.0.1",
+    "mongoose": "^5.7.5",
+    "morgan": "~1.9.1",
+    "nodemon": "^1.12.1",
+    "serve-favicon": "~2.4.5",
+    "stripe": "^5.3.0",
+    "uuid": "^3.1.0",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {
+    "ava": "1.4.1",
+    "husky": "^0.14.3",
+    "prettier": "^1.14.3"
+  }
+}

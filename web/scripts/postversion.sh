@@ -2,9 +2,13 @@
 
 echo $npm_package_version > .version
 
-git add .version
+tag="web-v$npm_package_version"
 
-git commit --amend --no-edit
+git add package.json
+git add .version
+git commit -m "$tag"
+
+git tag "$tag"
 
 git push
 git push --tags

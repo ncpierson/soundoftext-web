@@ -1,0 +1,21 @@
+version: "3"
+services:
+  default:
+    build: ./
+    command: pm2-dev start pm2.json
+    container_name: soundoftext-api
+    depends_on:
+      - mongo
+    env_file: config/development.env
+    image: ncpierson/soundoftext-api:latest
+    ports:
+      - "5757:5757"
+    restart: always
+    volumes:
+      - "./src:/usr/src/app/src"
+      - "./node_modules:/usr/src/app/node_modules"
+      - "./config:/usr/src/app/config"
+  mongo:
+    container_name: soundoftext-db
+    image: mongo
+    restart: always

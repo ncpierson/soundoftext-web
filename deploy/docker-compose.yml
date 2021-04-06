@@ -1,0 +1,66 @@
+version: "3"
+services:
+  proxy:
+    command:
+      # - "--api.insecure=true"
+      - "--certificatesresolvers.default.acme.httpchallenge=true"
+      - "--certificatesresolvers.default.acme.httpchallenge.entrypoint=web"
+      - "--certificatesresolvers.default.acme.email=me@nick.exposed"
+      - "--certificatesresolvers.default.acme.storage=acme.json"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--log.level=INFO"
+      - "--providers.docker=true"
+    container_name: proxy
+    image: traefik:v2.3
+    labels:
+      - "traefik.http.routers.http-catchall.rule=hostregexp(`{host:.+}`)"
+      - "traefik.http.routers.http-catchall.entrypoints=web"
+      - "traefik.http.routers.http-catchall.middlewares=redirect-to-https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+    ports:
+      - 80:80
+      - 443:443
+      - 8080:8080
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /opt/traefik/acme.json:/acme.json
+  soundoftext-api:
+    container_name: soundoftext-api
+    depends_on:
+      - soundoftext-db
+    env_file: soundoftext/api.env
+    image: ncpierson/soundoftext-api:1.1.2
+    labels:
+      - "traefik.http.routers.soundoftext-api.rule=Host(`api.soundoftext.com`)"
+      - "traefik.http.routers.soundoftext-api.entrypoints=websecure"
+      - "traefik.http.routers.soundoftext-api.tls.certresolver=default"
+      - "traefik.http.services.soundoftext-api.loadbalancer.server.port=5757"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "3"
+    restart: always
+  soundoftext-db:
+    container_name: soundoftext-db
+    image: mongo:4.2.0
+    labels:
+      - "traefik.enable=false"
+    restart: always
+    volumes:
+      - /opt/soundoftext/db:/data/db
+  soundoftext-web:
+    container_name: soundoftext-web
+    image: ncpierson/soundoftext-web:1.3.0
+    labels:
+      - "traefik.http.routers.soundoftext-web.rule=Host(`soundoftext.com`)"
+      - "traefik.http.routers.soundoftext-web.entrypoints=websecure"
+      - "traefik.http.routers.soundoftext-web.tls.certresolver=default"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "3"
+    restart: always
