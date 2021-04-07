@@ -1,5 +1,5 @@
 # ----------- Builder ----------
-FROM node:8.12 as builder
+FROM node:12.14-alpine as builder
 
 WORKDIR /usr/src/app
 
