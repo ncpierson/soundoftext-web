@@ -129,7 +129,7 @@ function lookupSound(soundId) {
   const fileName = `${soundId}.mp3`;
 
   const options = {
-    hostname: 'storage.soundoftext.com',
+    hostname: 'sot.sfo2.digitaloceanspaces.com',
     method: 'HEAD',
     path: '/' + fileName,
   };
@@ -141,7 +141,7 @@ function lookupSound(soundId) {
           resolve();
         }
 
-        resolve(`https://${options.hostname}${options.path}`);
+        resolve(`https://storage.soundoftext.com${options.path}`);
       })
       .on('error', (error) => {
         resolve();
