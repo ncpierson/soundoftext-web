@@ -19,3 +19,4 @@ yarn-error.log*
 api/config/production.env
 api/config/development.env
 deploy/soundoftext/api.env
+deploy/acme.json
