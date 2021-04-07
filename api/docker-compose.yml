@@ -7,7 +7,7 @@ services:
     depends_on:
       - mongo
     env_file: config/development.env
-    image: ncpierson/soundoftext-api:latest
+    image: soundoftext/api:latest
     ports:
       - '5757:5757'
     restart: always

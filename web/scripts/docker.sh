@@ -2,8 +2,8 @@
 
 set -ex
 
-USERNAME=ncpierson
-IMAGE=soundoftext-web
+USERNAME=soundoftext
+IMAGE=web
 VERSION=`cat .version`
 
 # Begin Functions
@@ -32,7 +32,7 @@ start () {
     --name=soundoftext-web \
     --detach               \
     -p 3000:80             \
-    ncpierson/soundoftext-web:latest
+    soundoftext/web:latest
 }
 
 stop () {

@@ -2,8 +2,8 @@
 
 set -ex
 
-USERNAME=ncpierson
-IMAGE=soundoftext-api
+USERNAME=soundoftext
+IMAGE=api
 VERSION=`cat .version`
 
 # Begin Functions

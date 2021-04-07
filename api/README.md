@@ -9,7 +9,7 @@ This repository contains the Node/Express API server for soundoftext.com.
 You can clone this repository locally or pull the **docker image**:
 
 ```
-docker pull ncpierson/soundoftext-api
+docker pull soundoftext/api
 ```
 
 This image requires environment variables, explained in the

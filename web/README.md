@@ -11,7 +11,7 @@ This repository contains the Web App for soundoftext.com.
 You can pull this repository as a **docker image**:
 
 ```
-docker pull ncpierson/soundoftext-web
+docker pull soundoftext/web
 ```
 
 When run, it will automatically connect to the official api. If you want to
