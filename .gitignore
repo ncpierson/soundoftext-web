@@ -2,6 +2,9 @@
 .gitsecret/keys/random_seed
 !*.secret
 
+# Deploy
+deploy/caddy
+
 # Web
 build/
 

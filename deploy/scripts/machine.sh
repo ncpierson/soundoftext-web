@@ -9,9 +9,24 @@ MACHINE_NAME=soundoftext
 connect () {
   local OPTIND
 
-  CONTAINER=${1}
+  while getopts "ad" option; do
+    case "$option" in
+      a) connect_app;;
+      d) connect_db;;
+    esac
+  done
+}
 
-  docker exec -it "$CONTAINER" sh
+connect_app () {
+  docker exec -it   \
+    soundoftext-api \
+    sh
+}
+
+connect_db () {
+  docker exec -it  \
+    soundoftext-db \
+    mongo
 }
 
 down () {
@@ -29,7 +44,7 @@ ps () {
 pull () {
   local OPTIND
 
-  while getopts "bps" option; do
+  while getopts "ps" option; do
     case "$option" in
       p) pull_proxy;;
       s)
@@ -41,7 +56,7 @@ pull () {
 }
 
 pull_proxy () {
-  docker-machine scp $MACHINE_NAME:/opt/traefik/acme.json acme.json
+  docker-machine scp -r $MACHINE_NAME:/opt/caddy/data caddy/
 }
 
 pull_soundoftext () {
@@ -53,23 +68,30 @@ pull_soundoftext () {
 push () {
   local OPTIND
 
-  while getopts "bps-:" option; do
+  while getopts "cps-:" option; do
     case "$option" in
       -)
         if [ "$OPTARG" == "all" ]; then
+          push_caddy
           push_proxy
+          push_soundoftext
         fi
         ;;
+      c) push_caddy;;
       p) push_proxy;;
       s) push_soundoftext;;
     esac
   done
 }
 
+push_caddy () {
+  docker-machine ssh $MACHINE_NAME "mkdir -p /opt/caddy"
+  docker-machine scp Caddyfile $MACHINE_NAME:/opt/caddy/
+}
+
 push_proxy () {
-  docker-machine ssh $MACHINE_NAME "mkdir -p /opt/traefik"
-  docker-machine scp acme.json $MACHINE_NAME:/opt/traefik/acme.json
-  docker-machine ssh $MACHINE_NAME "chmod 600 /opt/traefik/acme.json"
+  docker-machine ssh $MACHINE_NAME "mkdir -p /opt/caddy/data"
+  docker-machine scp -r caddy/data $MACHINE_NAME:/opt/caddy/
 }
 
 push_soundoftext () {

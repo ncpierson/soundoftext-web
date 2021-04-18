@@ -1,0 +1,11 @@
+{
+  email contact@soundoftext.com
+}
+
+soundoftext.com {
+  reverse_proxy soundoftext-web
+}
+
+api.soundoftext.com {
+  reverse_proxy soundoftext-api:5757
+}
