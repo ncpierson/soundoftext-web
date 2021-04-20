@@ -4,6 +4,13 @@ import { OutboundLink } from 'react-ga';
 const resources = [
   {
     description:
+      'Hearling is an improved version of  Sound of Text, with high-quality voices, made by the same developer.',
+    label: 'hearling',
+    title: 'Hearling',
+    url: 'https://hearling.com',
+  },
+  {
+    description:
       'Anki allows you to create your own flashcard decks and study how and when you want on any device.',
     label: 'anki',
     title: 'Anki',
@@ -22,13 +29,6 @@ const resources = [
     label: 'memrise',
     title: 'Memrise',
     url: 'https://memrise.com',
-  },
-  {
-    description:
-      'Speaking Lab is a free language learning website with free workbooks, resources, and courses on a variety of topics across several languages.',
-    label: 'speakinglab',
-    title: 'Speaking Lab',
-    url: 'https://www.speakinglab.xyz/',
   },
 ];
 

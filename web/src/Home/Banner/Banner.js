@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { OutboundLink } from 'react-ga';
 
-const NAME = 'HEARLING_PRO';
+const NAME = 'HEARLING_REMINDER_20210419';
 
 class Banner extends Component {
   constructor() {
@@ -29,24 +29,29 @@ class Banner extends Component {
           <div className="card grid__item">
             <div className="card__content">
               <h3 className="card__title">
-                <span>🥳</span> <span> Just Launched: Hearling Pro</span>
+                <span aria-label="sparkles" role="img">
+                  ✨
+                </span>{' '}
+                <span>Try Hearling!</span>
               </h3>
               <p>
-                Hearling is a website meant to be an improved version of Sound
-                of Text, made by the same creator. Now, the Pro version has been
-                launched!
+                Interested in high quality voices, or tired of the 200 character
+                limit on Sound of Text? Try Hearling! You will gain access to
+                over 200 voices, in 34 different languages ‒ powered by machine
+                learning.
               </p>
               <p>
-                For $5 per month, you get up to 250 thousand characters of
-                high-quality voices. You can also create and download up to 50
-                clips at once. If this sounds interesting to you, please check
-                it out!
+                <em>This isn't just an ad!</em> Hearling is made by the same
+                developer as Sound of Text, and I encourage you to try it out!
+                It is completely free, or you can subscribe to Hearling Pro for
+                $5 per month to gain access to quicker clip creation (and
+                support the developer!)
               </p>
             </div>
             <div className="card__actions">
               <OutboundLink
                 className="card__action"
-                eventLabel="hearling:pro"
+                eventLabel="hearling:banner"
                 target="_blank"
                 to="https://hearling.com"
               >
