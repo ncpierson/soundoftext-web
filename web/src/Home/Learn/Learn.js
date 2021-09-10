@@ -4,10 +4,17 @@ import { OutboundLink } from 'react-ga';
 const resources = [
   {
     description:
-      'Hearling is an improved version of  Sound of Text, with high-quality voices, made by the same developer.',
+      'Hearling is an improved version of Sound of Text, with high-quality voices, created by the same developer.',
     label: 'hearling',
     title: 'Hearling',
     url: 'https://hearling.com',
+  },
+  {
+    description:
+      'Language Trainers provides individually-tailored language training on a one-on-one or small group basis to busy people who need to learn a new language.',
+    label: 'languagetrainers',
+    title: 'Language Trainers',
+    url: 'https://www.languagetrainers.co.uk/online-classes.php',
   },
   {
     description:
@@ -15,20 +22,6 @@ const resources = [
     label: 'anki',
     title: 'Anki',
     url: 'https://apps.ankiweb.net',
-  },
-  {
-    description:
-      'Duolingo provides guided courses and gamification for learners at any level and supports many popular languages.',
-    label: 'duolingo',
-    title: 'Duolingo',
-    url: 'https://duolingo.com',
-  },
-  {
-    description:
-      'Memrise focuses on learning vocabulary with using flashcard-like decks created by a large community of members. There are courses for over 200 languages.',
-    label: 'memrise',
-    title: 'Memrise',
-    url: 'https://memrise.com',
   },
 ];
 
