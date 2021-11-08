@@ -44,11 +44,8 @@ const About = () => {
         </li>
         <li className="contact-detail">
           <img src={iconPatreon} alt="email" className="icon-patreon" />
-          <OutboundLink
-            to="https://patreon.com/nickpierson"
-            eventLabel="patreon"
-          >
-            Nick Pierson
+          <OutboundLink to="https://patreon.com/florabtw" eventLabel="patreon">
+            Flora Moon
           </OutboundLink>
         </li>
       </ul>

@@ -32,7 +32,7 @@ class Supporters extends Component {
           <p className="section__text">
             If you would like to see your name here, donate $3 or more via{' '}
             <OutboundLink
-              to="https://patreon.com/nickpierson"
+              to="https://patreon.com/florabtw"
               eventLabel="patreon"
             >
               Patreon

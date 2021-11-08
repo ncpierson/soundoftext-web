@@ -26,7 +26,7 @@ function Contribute(props) {
           <div className="grid__item grid__item--thin">
             <OutboundLink
               eventLabel="patreon"
-              to="https://www.patreon.com/nickpierson"
+              to="https://www.patreon.com/florabtw"
               className="button button--white"
             >
               Become a Patron
