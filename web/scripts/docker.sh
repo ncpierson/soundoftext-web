@@ -13,12 +13,8 @@ build () {
     --no-cache                 \
     -t $USERNAME/$IMAGE:latest \
     .
-}
 
-deploy () {
   docker tag $USERNAME/$IMAGE:latest $USERNAME/$IMAGE:$VERSION
-  docker push $USERNAME/$IMAGE:latest
-  docker push $USERNAME/$IMAGE:$VERSION
 }
 
 down () {
@@ -39,6 +35,11 @@ stop () {
   docker rm -f soundoftext-web
 }
 
+push () {
+  docker push $USERNAME/$IMAGE:latest
+  docker push $USERNAME/$IMAGE:$VERSION
+}
+
 up () {
   docker-compose          \
     -f docker-compose.yml \
@@ -54,10 +55,11 @@ case "$COMMAND" in
   build) build $@;;
   deploy)
     build
-    deploy
+    push
     ;;
   down) down;;
   start) start;;
   stop) stop;;
+  push) push;;
   up) up;;
 esac

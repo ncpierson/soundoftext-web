@@ -33,7 +33,7 @@ services:
       - /opt/soundoftext/db:/data/db
   soundoftext-web:
     container_name: soundoftext-web
-    image: soundoftext/web:1.5.1
+    image: soundoftext/web:1.5.2
     logging:
       driver: 'json-file'
       options:
