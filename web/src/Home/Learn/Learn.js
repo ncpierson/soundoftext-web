@@ -11,13 +11,6 @@ const resources = [
   },
   {
     description:
-      'Language Trainers provides individually-tailored language training on a one-on-one or small group basis to busy people who need to learn a new language.',
-    label: 'languagetrainers',
-    title: 'Language Trainers',
-    url: 'https://www.languagetrainers.co.uk/online-classes.php',
-  },
-  {
-    description:
       'Anki allows you to create your own flashcard decks and study how and when you want on any device.',
     label: 'anki',
     title: 'Anki',
