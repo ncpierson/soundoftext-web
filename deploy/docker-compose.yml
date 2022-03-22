@@ -18,7 +18,7 @@ services:
     depends_on:
       - soundoftext-db
     env_file: soundoftext/api.env
-    image: soundoftext/api:1.2.0
+    image: soundoftext/api:1.2.1
     logging:
       driver: 'json-file'
       options:
@@ -33,7 +33,7 @@ services:
       - /opt/soundoftext/db:/data/db
   soundoftext-web:
     container_name: soundoftext-web
-    image: soundoftext/web:1.6.0
+    image: soundoftext/web:1.6.1
     logging:
       driver: 'json-file'
       options:
