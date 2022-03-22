@@ -34,17 +34,17 @@ function Contribute(props) {
           </div>
         </div>
       </div>
-      <div className="section">
-        <div>
-          <h3 className="section__subtitle">Donate</h3>
-          <p className="section__text">
-            If you want to help monetarily but you aren't into that Patreon
-            thing, I totally understand. I've opened up a Stripe account just
-            for you — and you can donate as much or as little as you want.
-          </p>
-          <DonateForm />
-        </div>
-      </div>
+      {/* <div className="section"> */}
+      {/*   <div> */}
+      {/*     <h3 className="section__subtitle">Donate</h3> */}
+      {/*     <p className="section__text"> */}
+      {/*       If you want to help monetarily but you aren't into that Patreon */}
+      {/*       thing, I totally understand. I've opened up a Stripe account just */}
+      {/*       for you — and you can donate as much or as little as you want. */}
+      {/*     </p> */}
+      {/*     <DonateForm /> */}
+      {/*   </div> */}
+      {/* </div> */}
     </section>
   );
 }

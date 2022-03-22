@@ -39,7 +39,7 @@ app.use('/', function (req, res, next) {
   next();
 });
 
-app.use('/donations', require('./routes/donations'));
+// app.use('/donations', require('./routes/donations'));
 app.use('/sounds', require('./routes/sounds'));
 app.use('/voices', require('./routes/voices'));
 
