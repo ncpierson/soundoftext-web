@@ -1,5 +1,6 @@
+###############
 Web Sound of Text
-=====================
+###############
 
 Semua sound of text rata-rata berformat mp3 sehingga cocok digunakan sebagai nada dering. Dengan demikian, kamu bisa menggunakannya untuk semua jenis smartphone seperti Vivo, OPPO atau merk lainnya. Menariknya hasil download dari situs sound of text formatnya mp3 sehingga tinggal pakai saja. Untuk situsnya cukup banyak dan proses pembuatan sound of textnya sangat mudah dan cepat. 
 
