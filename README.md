@@ -12,7 +12,7 @@ Untuk membuat sound of text tidak harus via desktop tetapi bisa juga via smartph
 ----------
 Situs Voice Maker termasuk satu dari platform sound of text terlengkap dan pilihannya sangat banyak. Kamu bisa memilih suara wanita atau pria dan berikut cara memanfaatkan situs tersebut:
 
-- Langkah 1: Klik aplikasi Google Search lalu ketikkan situs berikut https://voicemaker.in/ 
+- Langkah 1: Klik aplikasi Google Search lalu ketikkan situs berikut https://voicemaker.in
 - Langkah 2: Pada kolom teks silahkan ketikkan kata-kata yang kamu inginkan.
 - Langkah 3: Untuk AI Engine, kamu bisa pilih neutral TTS. 
 - Langkah 4: Pada bagian language kamu bisa biarkan default dan berbahasa Inggris.
@@ -29,7 +29,7 @@ Kekurangannya adalah untuk kata-kata dalam bahasa Indonesia itu tergolong premiu
 
 Nama situsnya sama dengan istilah dirumahnya teks menjadi suara yang diinginkan. Situs ini sangat populer dan di dalamnya support untuk bahasa Indonesia, asing dan daerah. Untuk proses membuat sound of text dengan situs tersebut cukup mengikuti langkah-langkah sebagai berikut:
 
-- Langkah 1: Klik Google search pada smartphone lalu ketikkan https://soundoftext.com/ 
+- Langkah 1: Klik Google search pada smartphone lalu ketikkan https://soundoftext.com
 - Langkah 2: Ketikkan kata-kata pada kolom text dengan maksimal 200 karakter. 
 - Langkah 3: Pada bagian voice, kamu bisa pilih sesuai bahasa yang digunakan. 
 - Langkah 4: Jika sudah selesai maka kamu bisa klik submit. 
