@@ -40,6 +40,22 @@ Kelebihan situs ini bisa digunakan oleh siapapun termasuk orang yang awam. Pengg
 
 Pada situs tersebut ini menyediakan fitur donasi bagi siapapun yang punya kelebihan uang. Untuk donasi dimulai dari 1$ hingga tak terhingga untuk pengembangan situs tersebut. 
 
+Cara Membuat Nada Dering Menyebutkan Nama
+--------------
+
+
+Untuk membuat nada dering yang mengucapkan nama tertentu, Anda dapat menggunakan beberapa cara berikut:
+
+1. **Pilih Aplikasi Pemutar Audio**: Unduh dan pasang aplikasi pemutar audio yang memungkinkan Anda membuat dan mengedit nada dering khusus. Beberapa contoh aplikasi yang populer adalah Audacity (untuk komputer) atau Zedge (untuk ponsel).
+2. **Temukan Rekaman Suara**: Temukan atau buat rekaman suara yang mengucapkan nama yang ingin Anda gunakan sebagai nada dering. Anda dapat merekam suara sendiri dengan menggunakan perekam suara di ponsel atau menggunakan alat perekam eksternal. Alternatif lain adalah mencari file audio yang mengucapkan nama di situs web atau sumber lainnya.
+3. **Edit Rekaman Suara**: Gunakan aplikasi pemutar audio untuk mengedit rekaman suara. Potong bagian rekaman yang tidak diperlukan sehingga hanya tersisa suara yang mengucapkan nama. Anda juga dapat mengubah format atau kualitas audio sesuai kebutuhan Anda.
+4. **Konversi ke Format Nada Dering**: Setelah mengedit rekaman suara, konversikan file audio ke format yang kompatibel dengan ponsel Anda. Format umum untuk nada dering adalah MP3 atau M4R. Jika Anda menggunakan aplikasi pemutar audio yang kompatibel dengan ponsel, biasanya ada opsi untuk mengonversi file menjadi nada dering langsung.
+5. **Pindahkan ke Ponsel**: Setelah memiliki file nada dering dalam format yang tepat, transfer file tersebut ke ponsel Anda. Anda dapat menggunakan kabel USB, Bluetooth, atau mengirim melalui email atau layanan penyimpanan cloud.
+6. **Atur Nada Dering**: Buka pengaturan nada dering di ponsel Anda. Cari opsi untuk mengubah atau menyesuaikan nada dering. Cari file nada dering yang baru Anda buat dan atur sebagai nada dering untuk kontak yang sesuai.
+
+Setelah mengikuti langkah-langkah di atas, Anda seharusnya dapat memiliki nada dering yang mengucapkan nama yang diinginkan ketika seseorang menghubungi Anda. Pastikan untuk mengikuti petunjuk dan instruksi perangkat Anda seperti dijelaskan di artikel [Voice of text](https://news.google.com/articles/CBMiT2h0dHBzOi8vd3d3LnZvaWNlb2Z0ZXh0LmNvbS8yMDIzLzA1L2Rvd25sb2FkLW5hZGEtZGVyaW5nLW1wMy1tZW55ZWJ1dC1uYW1hLmh0bWzSAQA?hl=en-ID&gl=ID&ceid=ID%3Aen) berikut ini, karena langkah-langkah ini dapat sedikit berbeda tergantung pada perangkat yang digunakan.
+
+
 Cara Mengubah Nada Dering Whatsapp via Semua Smartphone
 --------------
 
