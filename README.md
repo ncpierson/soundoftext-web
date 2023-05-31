@@ -80,5 +80,5 @@ Sumber
 ---------------
 
 - [Sound of text](https://www.voiceoftext.com/p/sound-of-text-wa.html)
-- [Sound of text WA](https://www.autobild.co.id/2022/11/sound-of-text-wa-suara-google-bahasa.html)
+- [Sound of text WA](https://www.autobild.co.id/2023/05/8-sound-of-text-wa-yang-keren-bahasa.html)
 - [Sound of text Google](https://www.sebuahutas.com/sound-of-text/)
