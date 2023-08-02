@@ -20,5 +20,5 @@ Harap dicatat bahwa beberapa situs ini mungkin menawarkan layanan gratis dengan 
 Sumber
 ---------------
 
-- [Sound of text](https://www.autobild.co.id/2023/05/8-sound-of-text-wa-yang-keren-bahasa.html)
+- [Sound of text](https://www.teknotuf.com)
 - [Sound of text WA](https://www.sebuahutas.com/sound-of-text/)
