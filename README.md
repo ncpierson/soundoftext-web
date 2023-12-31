@@ -14,6 +14,7 @@ Berikut ini adalah daftar beberapa situs populer yang menyediakan layanan teks k
 - Acapela Group: Menyediakan layanan TTS dengan suara manusia yang alami dan beragam. Dapat digunakan untuk aplikasi perangkat lunak, situs web, atau perangkat bergerak.
 - ReadSpeaker: Layanan TTS yang dapat digunakan di berbagai platform, termasuk web, mobile, dan desktop. Menyediakan suara berkualitas tinggi dan dukungan untuk banyak bahasa.
 - ResponsiveVoice: API TTS yang dapat diintegrasikan ke dalam aplikasi web dan mobile. Menawarkan suara yang jelas dan dapat disesuaikan.
+- Soundtext.org: Layanan konversi teks ke suara yang tersedia secara gratis dan lengkap di [Soundtext.org](https://soundtext.org/) dengan pilihan bahasa Indonesia yang beragam mulai dari bahasa Indonesia resmi, bahasa Jawa, hingga Sunda.
 
 Harap dicatat bahwa beberapa situs ini mungkin menawarkan layanan gratis dengan batasan tertentu, sementara layanan yang lebih canggih dan lengkap mungkin memerlukan biaya atau berlangganan. Pastikan untuk memeriksa persyaratan dan fitur yang disediakan oleh masing-masing situs.
 
