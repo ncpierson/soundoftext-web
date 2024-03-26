@@ -18,8 +18,24 @@ Berikut ini adalah daftar beberapa situs populer yang menyediakan layanan teks k
 
 Harap dicatat bahwa beberapa situs ini mungkin menawarkan layanan gratis dengan batasan tertentu, sementara layanan yang lebih canggih dan lengkap mungkin memerlukan biaya atau berlangganan. Pastikan untuk memeriksa persyaratan dan fitur yang disediakan oleh masing-masing situs.
 
+Ubah Teks Menjadi Suara dengan Mudah dan Cepat
+Langkah-langkah:
+
+1. Buka situs web: soundtext.co.id, voiceoftext.com, atau soundtext.org.
+2. Masukkan teks: Ketik teks yang ingin diubah menjadi suara atau paste dari sumber lain.
+3. Pilih bahasa dan suara: Pilih bahasa Indonesia dan jenis suara yang diinginkan (pria, wanita, anak-anak).
+4. Atur kecepatan dan nada suara: Sesuaikan tempo dan nada suara sesuai keinginan.
+5. Preview dan download: Klik "Play" untuk mendengarkan preview, klik "Download" untuk menyimpan file MP3.
+
+Tips:
+
+- Gunakan "Clear" untuk menghapus teks.
+- Gunakan "History" untuk melihat teks yang pernah diubah menjadi suara.
+- Beberapa situs web menyediakan "Text to Speech API" untuk mengintegrasikan fungsi text-to-speech ke aplikasi atau website Anda.
+
 Sumber
 ---------------
 
 - [Sound of text](https://www.teknotuf.com)
 - [Sound of text WA](https://www.sebuahutas.com/sound-of-text/)
+- [Soundtext.org](https://soundtext.org/)
