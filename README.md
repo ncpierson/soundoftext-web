@@ -37,4 +37,3 @@ Sumber
 ---------------
 
 - [Emzeth Tutorial](https://www.emzeth.com)
-- [Sound of text WA](https://www.sebuahutas.com/sound-of-text/)
